@@ -41,7 +41,32 @@
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-50 text-slate-900">
+  <!-- start 1  --> 
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+    <script type="module" src="/index.tsx"></script>
+  <!-- start 1  end-->
+  <!-- start 2  -->
+  <button onclick="body.style.zoom='75%'">zoom 75%</button>
+  <button onclick="body.style.zoom='100%'">zoom 100%</button>
+  <button onclick="body.style.zoom='125%'">zoom 125%</button>
+  
+  <h2>
+    Best regards,
+    <br>
+	  <a href="https://gghionea.my.canva.site">George Ghionea</a> |
+      <a href="https://gghionea.my.canva.site/contact">Contact</a>
+    <br> 
+    Enterprise Software Architecture
+  </h2>
+
+  <p id="time1"></p>
+  <p id="time"></p> 
+  <script>
+    const d1 = new Date();
+	const d = new Date();
+	document.getElementById("time1").innerHTML = d1;
+	document.getElementById("time").innerHTML = "locale time : "+d.toLocaleString();
+  </script>
+  <!-- start 2  end-->
 </body>
 </html>
