@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Enterprise Software Architecture</title>
+  <link rel="icon" href="img/Favicon2.png" sizes="any">
+  <style>
+    body {
+	 background-image: url("img/backround3.jpg");
+     font-family: "verdana";
+     font-size: 14px;
+     color: #000000;
+     table, th, td {border:1px solid #000000; border-collapse: collapse;} 
+     <!--table, th, td {}--> 
+    }
+	.mirror {
+    border-collapse: collapse;
+    background-color: #d9d9d9;
+    padding: 2px;
+    width:65px;
+    }
+   .button {
+    border: none;
+    color: #ffffff;/* white */
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+   .button1 {background-color: #0066cc;} /* blue */
+   .button2 {background-color: #d9d9d9;} /* light gray */	
+  </style>
+</head>
+<body>
+  <button class="button button1" onclick="pickColor('#000000')">default color</button> 
+  <button class="button button1" onclick="pickColor('#cc0000')">color 1</button> 
+  <button class="button button1" onclick="pickColor('#0000cc')">color 2</button> 
+  <button class="button button1" onclick="zoomInOut('125%')">zoom 125%</button>
+  <button class="button button1" onclick="zoomInOut('100%')">zoom 100%</button>
+  <br><br>  
+  <table >
+  <tr style="height:120px">
+    <td>
+	  <img src="img/george1.jpg" title="George Ghionea - Photo 2" width="180px" height="120px">&nbsp;&nbsp;
+	</td>
+    <td align ="left"> 
+	  <h3>
+	  George Ghionea
+	  <br>
+      Enterprise Software Architecture
+	  <br>
+	  <button class="button button2"><a href="index.html">Home</a></button>
+	  <button class="button button2"><a href="about.html">About</a></button>
+      <button class="button button2"><a href="https://gghionea.my.canva.site/contact">Contact</a></button>
+	  </h3>
+    </td>
+  </tr>
+  </table>  
+  <p>➠ Specializing in Management,Software Architecture,Cybersecurity <br>
+  and seamless AI integration to transform complex problems into elegant solutions.
+  </p>
+  <p>➠ Mastering the Full Lifecycle of Software.I bridge the gap between creative design<br> and technical implementation.My approach is centered on secure,maintainable,<br>Multi-Tiers Apps that drives business growth and provides exceptional user experiences.    
+  </p>
+  <p>➠Architecture
+  Scalable, responsive Java/J2EE,MVC/N-Tiers apps with elegant design<br>
+  and robust state management.</p>
+  <p>➠Middleware & Backend
+  Secure Microservices with J2EE/WebSphere,JSP/Servlets/EJB,<br> 
+  Oracle/DB2/SQL on Unix/Linux.</p>
+  <p>➠AI Integration
+  Deploying AI, LLMs into production-ready features that enhance user value.</p>
+  <p>➠Cloud Infrastructure
+  AWS/GCP orchestration, CI/CD pipelines, and serverless architectures.</p>
+  </section>
+  <script> 
+   function zoomInOut(myZoom) {
+   document.body.style.zoom = myZoom;
+   document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
+   }
+   function pickColor(myColor) {
+   document.body.style.color = myColor;
+   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
+   }
+  </script>
+  <div class="mirror">
+    <center><p id="yourchoice"></p></center>
+  </div>
+</body>
+</html>
