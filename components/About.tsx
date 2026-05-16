@@ -27,7 +27,7 @@ const About: React.FC = () => {
                   <br/><br/>               
                   <h4 className="font-semibold text-slate-900">George Ghionea</h4>
                   <p className="text-sm text-slate-500">Enterprise Software Achitectures</p> 
-                  <p className="text-sm text-slate-500">Romania</p>
+                  <p className="text-sm text-slate-500">USA</p>
                </div>
             </div>
           </div>
