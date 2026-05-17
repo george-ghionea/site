@@ -12,9 +12,21 @@
      <!--table, th, td {border:1px solid #000000; border-collapse: collapse;}--> 
      table, th, td {} 
 	}
+	.roundbox1{
+    border-collapse: collapse;
+    background-color: #b3ccff;
+    padding: 2px;
+    width:530px;
+    }
+	.roundbox2{
+    border-collapse: collapse;
+    background-color: #ffffff;
+    padding: 2px;
+    width:530px;
+    }	
 	.mirror {
     border-collapse: collapse;
-    background-color: #d9d9d9;
+    background-color: #b3ccff;
     padding: 2px;
     width:65px;
     }
@@ -32,7 +44,7 @@
    .button1 {background-color: #0066cc;} /* blue */
    .button2 {background-color: #d9d9d9;} /* light gray */	
    .button3 {background-color: #800060;} /* light red */
-   .button4 {background-color: #ffffff;} /* yellow ffff66 white ffffff*/
+   .button4 {background-color: #ffff66;} /* yellow ffff66 white ffffff*/
    .container{
       display: inline-block;
     }
@@ -51,7 +63,8 @@
     } 
   </style>
 </head>
-<body>
+<body> 
+  <div class="roundbox1">
   <button class="button button1" onclick="pickColor('#000000')">default color</button> 
   <button class="button button1" onclick="pickColor('#0000cc')">color 1</button> 
   <button class="button button1" onclick="pickColor('#cc0000')">color 2</button> 
@@ -81,7 +94,8 @@
     </td>
   </tr>
   </table>  
-
+  </div>
+  <div class="roundbox2">
   <p>
     © George Ghionea - <span id="year"></span> 
     - hosted on <a><strong>GitHub</strong></a>
@@ -93,13 +107,13 @@
       if (yEl) yEl.textContent = new Date().getFullYear();
     })();
   </script>
-  <p id="time1"></p>
-  <p id="time"></p> 
+  <p id="timeZone"></p>
+  <p id="timeLocale"></p> 
   <script>
     const d1 = new Date();
 	const d = new Date();
-	document.getElementById("time1").innerHTML = d1;
-	document.getElementById("time").innerHTML = "locale time : "+d.toLocaleString();
+	document.getElementById("timeZone").innerHTML = d1;
+	document.getElementById("timeLocale").innerHTML = "Locale time : "+d.toLocaleString();
   </script>
   <script>
    function zoomInOut(myZoom) {
@@ -125,6 +139,7 @@
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
   </div>
+  </div> 
 </body>
 </html>
 
