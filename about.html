@@ -12,6 +12,18 @@
      <!--table, th, td {border:1px solid #000000; border-collapse: collapse;} -->
      table, th, td {}
     }
+	.roundbox1{
+    border-collapse: collapse;
+    background-color: #b3ccff;
+    padding: 2px;
+    width:530px;
+    }
+	.roundbox2{
+    border-collapse: collapse;
+    background-color: #ffffff;
+    padding: 2px;
+    width:530px;
+    }
 	.message1 {
      background-color:#ffffff;
 	 font-weight: normal;
@@ -19,7 +31,7 @@
 	}
 	.mirror {
     border-collapse: collapse;
-    background-color: #d9d9d9;
+    background-color: #b3ccff;
     padding: 2px;
     width:65px;
     }
@@ -37,10 +49,11 @@
    .button1 {background-color: #0066cc;} /* blue */
    .button2 {background-color: #d9d9d9;} /* light gray */	
    .button3 {background-color: #800060;} /* light red */
-   .button4 {background-color: #ffffff;} /* yellow ffff66 white ffffff*/	  
+   .button4 {background-color: #ffff66;} /* yellow ffff66 white ffffff*/	  
   </style>
 </head>
 <body>
+  <div class="roundbox1">
   <button class="button button1" onclick="pickColor('#000000')">default color</button> 
   <button class="button button1" onclick="pickColor('#0000cc')">color 1</button> 
   <button class="button button1" onclick="pickColor('#cc0000')">color 2</button> 
@@ -68,21 +81,25 @@
     </td>
   </tr>
   </table>  
+  </div>  
+  <div class="roundbox2"> 
   <p>➠ Specializing in Management,Software Architecture,Cybersecurity <br>
-  and seamless AI integration to transform complex problems into elegant solutions.
   </p>
-  <p>➠ Mastering the Full Lifecycle of Software.I bridge the gap between creative design<br> and technical implementation.My approach is centered on secure,maintainable,<br>Multi-Tiers Apps that drives business growth and provides exceptional user experiences.    
+  <p>➠ Mastering the Full Lifecycle of Software..My approach is centered <br> 
+  on secure,maintainable Multi-Tiers Apps    
   </p>
-  <p>➠Architecture - 
-  Scalable, responsive Java/J2EE,MVC/N-Tiers apps with elegant design<br>
-  and robust state management.</p>
-  <p>➠Middleware & Backend - 
-  Secure Microservices with J2EE/WebSphere,JSP/Servlets/EJB,<br> 
-  Oracle/DB2/SQL on Unix/Linux.</p>
-  <p>➠AI Integration - 
-  Deploying AI, LLMs into production-ready features that enhance user value.</p>
-  <p>➠Cloud Infrastructure - 
-  AWS/GCP orchestration, CI/CD pipelines, and serverless architectures.</p>
+  <p>➠ Architecture - Scalable, responsive Java/J2EE,MVC/N-Tiers apps with <br>
+  elegant design and robust state management.
+  </p>
+  <p>➠ Middleware & Backend - Secure Microservices with J2EE/WebSphere <br>
+  ,JSP/Servlets/EJB,Oracle/DB2/SQL on Unix/Linux.
+  </p>
+  <p>➠ AI Integration - Deploying AI, LLMs into production-ready features <br>
+  that enhance user value.
+  </p>
+  <p>➠ Cloud Infrastructure - AWS/GCP orchestration, CI/CD pipelines, <br>
+  and serverless architectures.
+  </p>
   </section>
   <script> 
    function zoomInOut(myZoom) {
@@ -107,6 +124,7 @@
   </script>
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
+  </div>
   </div>
 </body>
 </html>
