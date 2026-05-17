@@ -40,9 +40,11 @@
       overflow: hidden;     
       white-space: nowrap;  
       animation: typing 3s steps(26, end) forwards;
+	  font-weight: normal;
+	  /*font-size: 16px;*/
     }
     @keyframes typing {
-      from {background-color: #0066cc;}  
+      from {background-color: #800060;}  
       to {background-color: #ffffff;}    
       from {width: 0;}
       to {width: 323px} 
@@ -69,9 +71,9 @@
       <button class="button button4"><a href="https://gghionea.my.canva.site/contact" target="_parent">Contact</a></button>
       <button class="button button4"><a href="https://gghionea.my.canva.site/services" target="_parent">Services Offering</a></button>	 
 	  <button class="button button4"><a href="about.html">About</a></button><br>	  
-	  <button class="button button3" onclick ="alert1()">AI Studio</button> 
-	  <button class="button button3" onclick ="alert1()">Gemini</button>
-	  <button class="button button3" onclick ="alert2()">GitHub</button><br>
+	  <button class="button button3" onclick ="fillAlert('ais')">AI Studio</button> 
+	  <button class="button button3" onclick ="fillAlert('gem')">Gemini</button>
+	  <button class="button button3" onclick ="fillAlert('git')">GitHub</button><br>
 	  <div class="container">
         <div class="typed-out">Think, Build, Share, Collaborate</div>
       </div>  
@@ -110,14 +112,15 @@
    }
   </script>
   <script>
-  function alert1(){
-   let message = alert('Think, Build, Share, Collaborate. Questions? Contact me!');
-   document.getElementById("message").innerHTML = message;
+   function fillAlert(varAlert){
+    let textAlert;
+    if (varAlert == 'git') {
+      textAlert = alert(' ➠ You are there !');
+    } else {
+      textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+    }
+    document.getElementById("text").innerHTML = textAlert;
   }
-   function alert2(){
-   let message = alert('You are there!');
-   document.getElementById("message").innerHTML = message;
-  } 
   </script> 
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
