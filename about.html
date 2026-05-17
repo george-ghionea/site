@@ -14,6 +14,7 @@
     }
 	.message1 {
      background-color:#ffffff;
+	 font-weight: normal;
      /*color:#0066cc;*/
 	}
 	.mirror {
@@ -59,9 +60,9 @@
       <button class="button button4"><a href="https://gghionea.my.canva.site/contact" target="_parent">Contact</a></button>
       <button class="button button4"><a href="https://gghionea.my.canva.site/services" target="_parent">Services Offering</a></button>	 
 	  <button class="button button4"><a href="index.html">Home</a></button><br> 
-	  <button class="button button3" onclick ="alert1()">AI Studio</button> 
-	  <button class="button button3" onclick ="alert1()">Gemini</button>
-	  <button class="button button3" onclick ="alert2()">GitHub</button><br>
+	  <button class="button button3" onclick ="fillAlert('ais')">AI Studio</button> 
+	  <button class="button button3" onclick ="fillAlert('gem')">Gemini</button>
+	  <button class="button button3" onclick ="fillAlert('git')">GitHub</button><br>
       <div class="message1">Questions? Contact me</div>	 
 	  </h3>
     </td>
@@ -72,15 +73,15 @@
   </p>
   <p>➠ Mastering the Full Lifecycle of Software.I bridge the gap between creative design<br> and technical implementation.My approach is centered on secure,maintainable,<br>Multi-Tiers Apps that drives business growth and provides exceptional user experiences.    
   </p>
-  <p>➠Architecture
+  <p>➠Architecture - 
   Scalable, responsive Java/J2EE,MVC/N-Tiers apps with elegant design<br>
   and robust state management.</p>
-  <p>➠Middleware & Backend
+  <p>➠Middleware & Backend - 
   Secure Microservices with J2EE/WebSphere,JSP/Servlets/EJB,<br> 
   Oracle/DB2/SQL on Unix/Linux.</p>
-  <p>➠AI Integration
+  <p>➠AI Integration - 
   Deploying AI, LLMs into production-ready features that enhance user value.</p>
-  <p>➠Cloud Infrastructure
+  <p>➠Cloud Infrastructure - 
   AWS/GCP orchestration, CI/CD pipelines, and serverless architectures.</p>
   </section>
   <script> 
@@ -94,14 +95,15 @@
    }
   </script>
   <script>
-  function alert1(){
-   let message = alert('Think, Build, Share, Collaborate. Questions? Contact me!');
-   document.getElementById("message").innerHTML = message;
+   function fillAlert(varAlert){
+    let textAlert;
+    if (varAlert == 'git') {
+      textAlert = alert(' ➠ You are there !');
+    } else {
+      textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+    }
+    document.getElementById("text").innerHTML = textAlert;
   }
-   function alert2(){
-   let message = alert('You are there!');
-   document.getElementById("message").innerHTML = message;
-  } 
   </script>
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
