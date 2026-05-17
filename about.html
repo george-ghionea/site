@@ -12,6 +12,10 @@
      <!--table, th, td {border:1px solid #000000; border-collapse: collapse;} -->
      table, th, td {}
     }
+	.message1 {
+     background-color:#ffffff;
+     /*color:#0066cc;*/
+	}
 	.mirror {
     border-collapse: collapse;
     background-color: #d9d9d9;
@@ -37,11 +41,10 @@
 </head>
 <body>
   <button class="button button1" onclick="pickColor('#000000')">default color</button> 
-  <button class="button button1" onclick="pickColor('#cc0000')">color 1</button> 
-  <button class="button button1" onclick="pickColor('#0000cc')">color 2</button> 
+  <button class="button button1" onclick="pickColor('#0000cc')">color 1</button> 
+  <button class="button button1" onclick="pickColor('#cc0000')">color 2</button> 
   <button class="button button1" onclick="zoomInOut('125%')">zoom 125%</button>
   <button class="button button1" onclick="zoomInOut('100%')">zoom 100%</button>
-  <br><br>  
   <table >
   <tr style="height:120px">
     <td>
@@ -55,9 +58,11 @@
 	  <br>
       <button class="button button4"><a href="https://gghionea.my.canva.site/contact" target="_parent">Contact</a></button>
       <button class="button button4"><a href="https://gghionea.my.canva.site/services" target="_parent">Services Offering</a></button>	 
-	  <button class="button button4"><a class="ex1" href="index.html">Home</a></button><br> 
-	  <button class="button button3" onclick ="alert('Contact me for AI Studio repository access')">AI Studio</button> 
-	  <button class="button button3" onclick ="alert('You are there')">GitHub</button> 
+	  <button class="button button4"><a href="index.html">Home</a></button><br> 
+	  <button class="button button3" onclick ="alert1()">AI Studio</button> 
+	  <button class="button button3" onclick ="alert1()">Gemini</button>
+	  <button class="button button3" onclick ="alert2()">GitHub</button><br>
+      <div class="message1">Questions? Contact me</div>	 
 	  </h3>
     </td>
   </tr>
@@ -87,6 +92,16 @@
    document.body.style.color = myColor;
    document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
    }
+  </script>
+  <script>
+  function alert1(){
+   let message = alert('Think, Build, Share, Collaborate. Questions? Contact me!');
+   document.getElementById("message").innerHTML = message;
+  }
+   function alert2(){
+   let message = alert('You are there!');
+   document.getElementById("message").innerHTML = message;
+  } 
   </script>
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
