@@ -9,7 +9,6 @@
      font-family: "verdana";
      font-size: 14px;
      color: #000000;
-     <!--table, th, td {border:1px solid #000000; border-collapse: collapse;} -->
      table, th, td {}
     }
 	.roundbox1{
@@ -25,9 +24,8 @@
     width:530px;
     }
 	.message1 {
-     background-color:#ffffff;
-	 font-weight: normal;
-     /*color:#0066cc;*/
+    background-color:#ffffff;
+	font-weight: normal;
 	}
 	.mirror {
     border-collapse: collapse;
@@ -37,7 +35,7 @@
     }
    .button {
     border: none;
-    color: #ffffff; /* white */
+    color: #ffffff; 
     padding: 3px 16px;
     text-align: center;
     text-decoration: none;
@@ -46,10 +44,10 @@
     margin: 4px 2px;
     cursor: pointer;
     }
-   .button1 {background-color: #0066cc;} /* blue */
-   .button2 {background-color: #d9d9d9;} /* light gray */	
-   .button3 {background-color: #800060;} /* light red */
-   .button4 {background-color: #ffff66;} /* yellow ffff66 white ffffff*/	  
+   .button1 {background-color: #0066cc;} 
+   .button2 {background-color: #d9d9d9;} 
+   .button3 {background-color: #800060;} 
+   .button4 {background-color: #ffff66;} 	  
   </style>
 </head>
 <body>
@@ -103,28 +101,28 @@
   </section>
   <script> 
    function zoomInOut(myZoom) {
-   document.body.style.zoom = myZoom;
-   document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
+    document.body.style.zoom = myZoom;
+    document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
    }
    function pickColor(myColor) {
-   document.body.style.color = myColor;
-   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
+    document.body.style.color = myColor;
+    document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
    }
   </script>
   <script>
    function fillAlert(varAlert){
     let textAlert;
     if (varAlert == 'git') {
-      textAlert = alert(' ➠ You are there !');
+        textAlert = alert(' ➠ You are there !');
     } else {
-      textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+        textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
     }
-    document.getElementById("text").innerHTML = textAlert;
+       document.getElementById("text").innerHTML = textAlert;
   }
-  </script>
+ </script>
   <div class="mirror">
     <center><p id="yourchoice"></p></center>
   </div>
-  </div>
+ </div>
 </body>
 </html>
