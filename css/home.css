@@ -13,7 +13,7 @@
     }	
 	.mirror {
     border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: #b3ccff;
     padding: 2px;
     width:65px;
     }
@@ -43,7 +43,7 @@
     }
     @keyframes typing {
       from {background-color: #800060;}  
-      to {background-color: #ffffff;}    
+      to {background-color: #f2f2f2;}    
       from {width: 0;}
       to {width: 310px} 
     } 
