@@ -1,0 +1,51 @@
+  <style>
+	.homescreen1{
+    border-collapse: collapse;
+    background-color: #b3ccff;
+    padding: 2px;
+    width:530px;
+    }
+	.homescreen2{
+    border-collapse: collapse;
+    background-color: #b3ccff;
+    padding: 2px;
+    width:530px;
+    }	
+	.mirror {
+    border-collapse: collapse;
+    background-color: #ffffff;
+    padding: 2px;
+    width:65px;
+    }
+   .button {
+    border: none;
+    color: #ffffff; /* white */
+    padding: 3px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+   .button1 {background-color: #0066cc;} 
+   .button2 {background-color: #d9d9d9;} 
+   .button3 {background-color: #800060;}
+   .button4 {background-color: #ffff66;} 
+   .container{
+      display: inline-block;
+    }
+   .typed-out{
+      overflow: hidden;     
+      white-space: nowrap;  
+      animation: typing 3s steps(26, end) forwards;
+	  font-weight: normal;
+    }
+    @keyframes typing {
+      from {background-color: #800060;}  
+      to {background-color: #ffffff;}    
+      from {width: 0;}
+      to {width: 310px} 
+    } 
+  </style>
+
