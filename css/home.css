@@ -17,9 +17,26 @@
     padding: 2px;
     width:65px;
     }
+  	.alertzone {
+    border-collapse: collapse;
+    background-color: red;
+    padding: 2px;
+    width:65px;
+    }	
+    .parent {
+	display: flex;
+    text-align: left; 
+    }
+    .child {
+    display: inline-block; 
+    padding: 1rem;
+    vertical-align: middle; 
+    background-color: #b3ccff;
+    }	
    .button {
+	border-radius: 5px;   
     border: none;
-    color: #ffffff; /* white */
+    color: #ffffff; 
     padding: 3px 16px;
     text-align: center;
     text-decoration: none;
@@ -40,6 +57,7 @@
       white-space: nowrap;  
       animation: typing 3s steps(26, end) forwards;
 	  font-weight: normal;
+	  border-radius: 3px;
     }
     @keyframes typing {
       from {background-color: #800060;}  
