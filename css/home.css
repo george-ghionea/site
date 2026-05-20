@@ -1,69 +1,51 @@
-  <style>
-	.homescreen1{
-    border-collapse: collapse;
-    background-color: #b3ccff;
-    padding: 2px;
-    width:530px;
-    }
-	.homescreen2{
-    border-collapse: collapse;
-    background-color: #b3ccff;
-    padding: 2px;
-    width:530px;
-    }	
-	.mirror {
-    border-collapse: collapse;
-    background-color: #b3ccff;
-    padding: 2px;
-    width:65px;
-    }
-  	.alertzone {
-    border-collapse: collapse;
-    background-color: red;
-    padding: 2px;
-    width:65px;
-    }	
-    .parent {
-	display: flex;
-    text-align: left; 
-    }
-    .child {
-    display: inline-block; 
-    padding: 1rem;
-    vertical-align: middle; 
-    background-color: #b3ccff;
-    }	
-   .button {
-	border-radius: 5px;   
-    border: none;
-    color: #ffffff; 
-    padding: 3px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    margin: 4px 2px;
-    cursor: pointer;
-    }
-   .button1 {background-color: #0066cc;} 
-   .button2 {background-color: #d9d9d9;} 
-   .button3 {background-color: #800060;}
-   .button4 {background-color: #ffff66;} 
-   .container{
-      display: inline-block;
-    }
-   .typed-out{
-      overflow: hidden;     
-      white-space: nowrap;  
-      animation: typing 3s steps(26, end) forwards;
-	  font-weight: normal;
-	  border-radius: 3px;
-    }
-    @keyframes typing {
-      from {background-color: #800060;}  
-      to {background-color: #f2f2f2;}    
-      from {width: 0;}
-      to {width: 310px} 
-    } 
-  </style>
-
+function zoomInOut(myZoom) {
+   document.body.style.zoom = myZoom;
+   document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
+}
+function pickColor(myColor) {
+   document.body.style.color = myColor;
+   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
+}
+function fillAlert(varAlert){
+   let textAlert;
+   if (varAlert == 'abo') {
+     textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+   } else {
+     textAlert = alert(' not set !');
+   }
+   document.getElementById("text").innerHTML = textAlert;
+}
+function test(myTest) {
+   let textAlert; 
+   document.body.style.color = myTest;
+   if (myTest == 'git') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
+   if (myTest == 'gem') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
+   if (myTest == 'ais') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
+}
+(function () {
+var yEl = document.getElementById('year');
+if (yEl) yEl.textContent = new Date().getFullYear();
+})();
+const d1 = new Date();
+const d2 = new Date();
+const options1 = {timeZone: 'Europe/Bucharest', 
+                 weekday: 'long',
+                 year: 'numeric',
+                 month: 'long',
+                 day: 'numeric',
+                 hour: '2-digit',
+                 minute: '2-digit',
+};
+const options2 = {timeZone: 'America/New_York', 
+                 weekday: 'long',
+                 year: 'numeric',
+                 month: 'long',
+                 day: 'numeric',
+                 hour: '2-digit',
+                 minute: '2-digit',
+};
+document.getElementById("timeLocale").innerHTML = "Europe/Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = "America/New_York : "+d2.toLocaleDateString('en-US', options2);	
