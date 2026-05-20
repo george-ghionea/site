@@ -8,18 +8,44 @@ function pickColor(myColor) {
 }
 function fillAlert(varAlert){
    let textAlert;
-   if (varAlert == 'git') {
-     textAlert = alert(' ➠ You are there !');
-   } else {
+   if (varAlert == 'abo') {
      textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+   } else {
+     textAlert = alert(' not set !');
    }
    document.getElementById("text").innerHTML = textAlert;
+}
+function test(myTest) {
+   let textAlert; 
+   document.body.style.color = myTest;
+   if (myTest == 'git') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
+   if (myTest == 'gem') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
+   if (myTest == 'ais') {  
+   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
 }
 (function () {
 var yEl = document.getElementById('year');
 if (yEl) yEl.textContent = new Date().getFullYear();
 })();
 const d1 = new Date();
-const d = new Date();
-document.getElementById("timeZone").innerHTML = d1;
-document.getElementById("timeLocale").innerHTML = "Locale time : "+d.toLocaleString();	
+const d2 = new Date();
+const options1 = {timeZone: 'Europe/Bucharest', 
+                 weekday: 'long',
+                 year: 'numeric',
+                 month: 'long',
+                 day: 'numeric',
+                 hour: '2-digit',
+                 minute: '2-digit',
+};
+const options2 = {timeZone: 'America/New_York', 
+                 weekday: 'long',
+                 year: 'numeric',
+                 month: 'long',
+                 day: 'numeric',
+                 hour: '2-digit',
+                 minute: '2-digit',
+};
+document.getElementById("timeLocale").innerHTML = "Europe/Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = "America/New_York : "+d2.toLocaleDateString('en-US', options2);	
