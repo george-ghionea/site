@@ -8,7 +8,7 @@ function pickColor(myColor) {
 }
 function fillAlert(varAlert){
    let textAlert;
-   if (varAlert == 'abo') {
+   if (varAlert === 'abo') {
      textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else {
      textAlert = alert(' not set !');
@@ -18,12 +18,16 @@ function fillAlert(varAlert){
 function test(myTest) {
    let textAlert; 
    document.body.style.color = myTest;
-   if (myTest == 'git') {  
+   if (myTest === 'git') {  
    document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
-   if (myTest == 'gem') {  
+   if (myTest === 'gem') {  
    document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
-   if (myTest == 'ais') {  
+   if (myTest === 'ais') {  
    document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
+}
+function goToWhere(myURL) {
+   if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
+   if (myURL==='ser'){window.location.href = "https://gghionea.my.canva.site/services";}   
 }
 (function () {
 var yEl = document.getElementById('year');
