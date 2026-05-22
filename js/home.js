@@ -9,7 +9,7 @@ function pickColor(myColor) {
 function fillAlert(varAlert){
    let textAlert;
    if (varAlert === 'abo') {
-     textAlert = alert(' ➠ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+     textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else {
      textAlert = alert(' not set !');
    }
@@ -19,11 +19,11 @@ function test(myTest) {
    let textAlert; 
    document.body.style.color = myTest;
    if (myTest === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
+   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
    if (myTest === 'gem') {  
-   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
+   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
    if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "➠ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
+   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
 }
 function goToWhere(myURL) {
    if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
@@ -51,5 +51,5 @@ const options2 = {timeZone: 'America/New_York',
                  hour: '2-digit',
                  minute: '2-digit',
 };
-document.getElementById("timeLocale").innerHTML = "Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = "America / New York : "+d2.toLocaleDateString('en-US', options2);	
+document.getElementById("timeLocale").innerHTML = "➠ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = "➠ America / New York : "+d2.toLocaleDateString('en-US', options2);	
