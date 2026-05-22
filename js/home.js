@@ -51,5 +51,5 @@ const options2 = {timeZone: 'America/New_York',
                  hour: '2-digit',
                  minute: '2-digit',
 };
-document.getElementById("timeLocale").innerHTML = "Europe/Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = "America/New_York : "+d2.toLocaleDateString('en-US', options2);	
+document.getElementById("timeLocale").innerHTML = "Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = "America / New York : "+d2.toLocaleDateString('en-US', options2);	
