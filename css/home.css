@@ -32,6 +32,8 @@
     padding: 1rem;
     vertical-align: middle; 
     background-color: #b3ccff;
+    padding-top: 1px;
+    padding-bottom: 1px;		
     }	
    .button {
 	border-radius: 5px;   
