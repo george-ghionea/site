@@ -4,7 +4,7 @@ function zoomInOut(myZoom) {
 }
 function pickColor(myColor) {
    document.body.style.color = myColor;
-   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
+   document.getElementById("yourzoom").innerHTML = "color"+"<br>"+myColor;
 }
 function fillAlert(varAlert){
    let textAlert;
