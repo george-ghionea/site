@@ -1,3 +1,14 @@
+function defaultSt(varSt) {
+   if (varSt === 'resetst') {
+	    document.getElementById("yourchoice").innerHTML = "";	
+		document.getElementById("yourzoom").innerHTML = "";
+		document.getElementById("alertchoice").innerHTML = "";
+		document.body.style.color = "#000000";
+		document.body.style.zoom = "100%";
+   } else {
+     textAlert = alert(' not set !');
+   }  
+}
 function zoomInOut(myZoom) {
    document.body.style.zoom = myZoom;
    document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
