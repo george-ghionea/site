@@ -66,12 +66,12 @@
       overflow: hidden;     
       white-space: nowrap;  
       animation: typing 3s steps(26, end) forwards;
-	  font-weight: normal;
+	  font-weight: 400; /* normal */
 	  border-radius: 3px;
     }
     @keyframes typing {
       from {background-color: #800060;}  
-      to {background-color: #f2f2f2;}    
+      to {background-color: #b3ccff;} /* #f2f2f2 */    
       from {width: 0;}
       to {width: 310px} 
     } 
