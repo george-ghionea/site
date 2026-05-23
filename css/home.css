@@ -12,6 +12,13 @@
     width:520px;
 	border-radius: 10px;	
     }	
+   .myDiv1{
+	width: 520px;  
+	background-color: #f2f2f2;
+	border-radius: 5px;border:2px #f2f2f2; 
+	border-collapse: collapse;
+	padding: 2px;	
+	}	
 	.mirror {
     border-collapse: collapse;
     background-color: #b3ccff;
