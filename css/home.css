@@ -12,6 +12,16 @@
     width:520px;
 	border-radius: 10px;	
     }	
+   .spacer{
+	 margin-top: 0px;
+	 margin-bottom: 0px;
+	 padding: 0px;  
+   }
+    .spacer1{
+	 margin-top: 0px;
+	 margin-bottom: 10px;
+	 padding: 0px; 
+	}	 
    .myDiv1{
 	width: 520px;  
 	background-color: #f2f2f2;
