@@ -11,11 +11,11 @@ function defaultSt(varSt) {
 }
 function zoomInOut(myZoom) {
    document.body.style.zoom = myZoom;
-   document.getElementById("yourchoice").innerHTML = "zoom"+"<br>"+myZoom;
+   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom;
 }
 function pickColor(myColor) {
    document.body.style.color = myColor;
-   document.getElementById("yourzoom").innerHTML = "color"+"<br>"+myColor;
+   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
 }
 function fillAlert(varAlert){
    let textAlert;
