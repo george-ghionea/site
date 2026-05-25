@@ -1,56 +1,54 @@
   <style>
-	.homescreen1{
+   .homescreen{}
+   .homescreen1{
     border-collapse: collapse;
-    background-color: #b3ccff;
-    padding: 2px;
-    width:520px;
-    }
-	.homescreen2{
-    border-collapse: collapse;
-    background-color: #b3ccff;
+    background-color: #b3ccff;/*#b3ccff in prod #ccccff indigo*/
     padding: 10px;
-    width:520px;
+    width:530px;
 	border-radius: 10px;	
     }	
    .spacer1{
 	 margin-top: 4px;
 	 margin-bottom: 15px;
 	 padding: 0px;  
-    }
+   }
     .spacer2{
 	 margin-top: 0px;
 	 margin-bottom: 0px;
 	 padding: 0px; 
+	 /*color: red;*/
 	}
    .spacer3{
 	 margin-top: 0px;
 	 margin-bottom: 4px;
 	 padding: 0px;  
-    }	
+   }	
    .myDiv1{
-	width: 520px;  
-	background-color: #f2f2f2;
-	border-radius: 5px;border:2px #f2f2f2; 
+	width: 514px;  /*520 in prod*/
+	background-color: #f2f2f2;/*#f2f2f2 in prod*/
+	border:2px light gray; 
+	border-radius: 5px;
 	border-collapse: collapse;
-	padding: 2px;	
+	padding: 2px;/*2px in prod*/	
 	}	
-	.mirror {
+   .mirror {
     border-collapse: collapse;
     background-color: #b3ccff;
     padding: 2px;
     width:65px;
     }
-  	.alertzone {
+   .alertzone {
     border-collapse: collapse;
     background-color: red;
     padding: 2px;
     width:65px;
     }	
-    .parent {
+   .parent {
 	display: flex;
     text-align: left; 
+	padding: 2px;/* to be added on prod */
     }
-    .child {
+   .child {
     display: inline-block; 
     padding: 1rem;
     vertical-align: middle; 
@@ -85,8 +83,8 @@
 	  border-radius: 3px;
     }
     @keyframes typing {
-      from {background-color: #800060;}  
-      to {background-color: #b3ccff;} /* #f2f2f2 */    
+      from {background-color: #800060;} /* #800060 in prod #0000b3 blue */ 
+      to {background-color: #b3ccff;}   /* #f2f2f2 */
       from {width: 0;}
       to {width: 310px} 
     } 
