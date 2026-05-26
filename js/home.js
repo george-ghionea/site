@@ -29,12 +29,12 @@ function fillAlert(varAlert){
 function test(myTest) {
    let textAlert; 
    document.body.style.color = myTest;
-   if (myTest === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ You are there !";}
+     if (myTest === 'git') {  
+   document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ You are there !";}
    if (myTest === 'gem') {  
-   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ Question ? Ask Me or Gemini ?!";}  
+   document.getElementById("alertchoice").innerHTML = "♾️ Gemini"+"<br>"+"&nbsp;➠ Questions ? Ask Me or Gemini !";}  
    if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "➤ Think, Build, Share,Collaborate."+"<br>"+"➠ Let's get in touch !";}     
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Let's get in touch. Contact me !";}      
 }
 function goToWhere(myURL) {
    if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
@@ -62,5 +62,5 @@ const options2 = {timeZone: 'America/New_York',
                  hour: '2-digit',
                  minute: '2-digit',
 };
-document.getElementById("timeLocale").innerHTML = "➠ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = "➠ America / New York : "+d2.toLocaleDateString('en-US', options2);	
+document.getElementById("timeLocale").innerHTML = "🌐Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = "🌐America / New York : "+d2.toLocaleDateString('en-US', options2);	
