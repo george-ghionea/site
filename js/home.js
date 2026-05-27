@@ -1,3 +1,21 @@
+$(document).ready(function() {
+	$("#showDialog").click(function() {
+       $("#dialogBoxMe").dialog({
+        modal: true,
+        buttons: {
+            Contact: function() {
+                window.location.href = 'https://gghionea.my.canva.site'; // 
+            },
+            Services: function() {
+                window.location.href = 'https://gghionea.my.canva.site/services'; // 
+            },
+			Exit: function() {
+                $(this).dialog("close");
+            }
+       }
+    });
+  });	
+});
 function defaultSt(varSt) {
    if (varSt === 'resetst') {
 	    document.getElementById("yourchoice").innerHTML = "";	
@@ -30,11 +48,11 @@ function test(myTest) {
    let textAlert; 
    document.body.style.color = myTest;
      if (myTest === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ You are there !";}
+   document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ Don’t hesitate to drop me a line !";}
    if (myTest === 'gem') {  
    document.getElementById("alertchoice").innerHTML = "♾️ Gemini"+"<br>"+"&nbsp;➠ Questions ? Ask Me or Gemini !";}  
    if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Let's get in touch. Contact me !";}      
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance !";}      
 }
 function goToWhere(myURL) {
    if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
