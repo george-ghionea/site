@@ -61,41 +61,35 @@
     padding-bottom: 1px;		
     }	
    .button {
-    border-radius: 5px;   
+	border-radius: 5px;   
     border: none;
-    color: #ffffff;
+    color: #ffffff; 
     padding: 3px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
     margin: 4px 2px;
-    transition: 0.4s;
     cursor: pointer;
+	/*opacity: 0.6;*/
+    transition: 0.4s;
     }
-   .button1 {background-color: #0066cc;}    
-   .button2 {background-color: #008CBA;}    
-   .button3 {background-color: #008CBA;}    
-   .button4 {background-color: #bf4080;}       
-   .button1:hover {opacity: 0.6;}
-   .button2:hover {opacity: 0.6;color: #b30000;}
-   .button3:hover {opacity: 0.6;color: #0000ff;}
+   .button1 {background-color: #0066cc;}        
+   .button2 {background-color: #008CBA;}        
+   .button3 {background-color: #008CBA;}        
+   .button4 {background-color: #bf4080;}          
+   .button1:hover {opacity: 0.6;color: #000000;}
+   .button2:hover {opacity: 0.6;color: #000000;}
+   .button3:hover {opacity: 0.6;color: #000000;}
    .button4:hover {opacity: 0.6;color: #000000;}
    .container{
-      display: inline-block;
+    display: inline-block;
     }
    .typed-out{
-      overflow: hidden;     
-      white-space: nowrap;  
-      animation: typing 3s steps(26, end) forwards;
-	  font-weight: 400; /* normal */
-	  border-radius: 3px;
-    }
-    @keyframes typing {
-      from {background-color: #800060;} /* #800060 in prod #0000b3 blue */ 
-      to {background-color: #b3ccff;}   /* #f2f2f2 */
-      from {width: 0;}
-      to {width: 310px} 
-    } 
+    overflow: hidden;     
+    white-space: nowrap;  
+    animation: typing 3s steps(26, end) forwards;  
+	font-weight: 400;                              
+    } @keyframes typing {from {width: 0;}to {width: 100%;}} 
   </style>
 
