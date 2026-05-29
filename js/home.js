@@ -3,13 +3,13 @@ $(document).ready(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
         buttons: {
-            Contact: function() {
-                window.location.href = 'https://gghionea.my.canva.site'; // 
-            },
-            Services: function() {
-                window.location.href = 'https://gghionea.my.canva.site/services'; // 
-            },
-			Exit: function() {
+            //Contact: function() {
+            //    window.location.href = 'https://gghionea.my.canva.site';  
+            //},
+            //Services: function() {
+            //    window.location.href = 'https://gghionea.my.canva.site/services'; 
+            //},
+			Close: function() {
                 $(this).dialog("close");
             }
        }
