@@ -2,13 +2,10 @@ $(document).ready(function() {
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
+		resizable: false,   
         buttons: {
-            //Contact: function() {
-            //    window.location.href = 'https://gghionea.my.canva.site';  
-            //},
-            //Services: function() {
-            //    window.location.href = 'https://gghionea.my.canva.site/services'; 
-            //},
+            //Contact: function() { window.location.href = '';},
+            //Services: function() {window.location.href = '';},
 			Close: function() {
                 $(this).dialog("close");
             }
