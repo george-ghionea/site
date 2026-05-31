@@ -42,18 +42,30 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function test(myTest) {
-   let textAlert; 
-   document.body.style.color = myTest;
-     if (myTest === 'git') {  
+   const concierge_active=false;
+   var href1 ="concierge.html";
+   var href2 ="https"
+	         +"://"
+			 +"ai-presentation-875066238765"
+			 +".europe-west2"
+			 +".run"
+			 +".app";
+   if (concierge_active){goTo=href2;}else{goTo=href1;}
+   if (myTest === 'git') {  
    document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ Don’t hesitate to drop me a line !";}
    if (myTest === 'gem') {  
    document.getElementById("alertchoice").innerHTML = "♾️ Gemini"+"<br>"+"&nbsp;➠ Questions ? Ask Me or Gemini !";}  
+   /**
    if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance !";}      
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to contact Me or ask "+"<a href="+goTo+">"+"Concierge"+"</a>";}
+   */
+   if (myTest === 'ais') {  
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance !";}         
 }
 function goToWhere(myURL) {
    if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
-   if (myURL==='ser'){window.location.href = "https://gghionea.my.canva.site/services";}   
+   if (myURL==='ser'){window.location.href = "https://gghionea.my.canva.site/services";} 
+   if (myURL==='askai'){window.location.href = "concierge.html";}
 }
 (function () {
 var yEl = document.getElementById('year');
