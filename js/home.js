@@ -43,31 +43,50 @@ function fillAlert(varAlert){
    }
    document.getElementById("text").innerHTML = textAlert;
 }
-function test(myTest) {
-   const concierge_active=false;
-   var href1 ="concierge.html";
-   var href2 ="https"
-	         +"://"
-			 +"ai-presentation-875066238765"
-			 +".europe-west2"
-			 +".run"
-			 +".app";
-   if (concierge_active){goTo=href2;}else{goTo=href1;}
-   if (myTest === 'git') {  
+function infoZone(myZone) {
+   if (myZone === 'git') {  
    document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ Don’t hesitate to drop me a line !";}
-   if (myTest === 'gem') {  
+   if (myZone === 'gem') {  
    document.getElementById("alertchoice").innerHTML = "♾️ Gemini"+"<br>"+"&nbsp;➠ Questions ? Ask Me or Gemini !";}  
+   if (myZone === 'ais') { 
    /**
-   if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to contact Me or ask "+"<a href="+goTo+">"+"Concierge"+"</a>";}
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to contact Me or "+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>My Concierge</button>";}
    */
-   if (myTest === 'ais') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance !";}         
+   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance ";}
+   if (myZone === 'ai_') {  
+   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>";}
 }
 function goToWhere(myURL) {
-   if (myURL==='con'){window.location.href = "https://gghionea.my.canva.site/contact";}
-   if (myURL==='ser'){window.location.href = "https://gghionea.my.canva.site/services";} 
-   if (myURL==='askai'){window.location.href = "concierge.html";}
+   var href1 ="https"
+	         +"://"
+		     +"gghionea"
+		     +".my.canva.site"
+			 +"/contact";
+   var href2 ="https"
+	         +"://"
+		     +"gghionea"
+		     +".my.canva.site"
+			 +"/services";
+   if (myURL==='con'){window.location.href = href1;}
+   if (myURL==='ser'){window.location.href = href2;} 
+}
+function goToAI(myURL) {
+   var href1 ="https"
+	         +"://"
+		     +"www"
+		     +".hitech"
+		     +".usa";
+   var href2 ="https"
+	         +"://"
+		     +"ai-presentation-7"
+		     +".europe-west2"
+		     +".run"
+		     +".app";		 
+   if (myURL==='askai'){
+	   const concierge_active=false;
+	   if (concierge_active){window.location.href = href1;}
+	   else{textAlert = alert('➤ George s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');}
+   }
 }
 (function () {
 var yEl = document.getElementById('year');
