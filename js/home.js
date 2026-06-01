@@ -35,9 +35,11 @@ function pickColor(myColor) {
 function fillAlert(varAlert){
    let textAlert;
    if (varAlert === 'abo') {
-     textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+       textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+   } else if (varAlert === 'askai') {
+       textAlert = alert(' ➤ George s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');
    } else {
-     textAlert = alert(' not set !');
+       textAlert = alert(' not set !');
    }
    document.getElementById("text").innerHTML = textAlert;
 }
