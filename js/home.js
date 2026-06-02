@@ -3,7 +3,7 @@ $(document).ready(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
 		resizable: false,   
-        buttons: {	
+        buttons: {
             //Contact: function() { window.location.href = '';},
             //Services: function() {window.location.href = '';},
 			Close: function() {
@@ -44,11 +44,11 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function infoZone(myZone) {
-   var hrefContact ="https"
-	               +"://"
-		           +"gghionea"
-		           +".my.canva.site"
-			       +"/contact";
+	var hrefContact ="https"
+	                +"://"
+		            +"gghionea"
+		            +".my.canva.site"
+			        +"/contact";
    if (myZone === 'git') {  
    document.getElementById("alertchoice").innerHTML = "♾️Git Hub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";}
    if (myZone === 'gem') {  
@@ -56,7 +56,7 @@ function infoZone(myZone) {
    if (myZone === 'ais') { 
    document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";}
    if (myZone === 'ai_') {  
-   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";}'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>";}
+   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";}
 }
 function goToWhere(myURL) {
    var href1 ="https"
@@ -87,7 +87,9 @@ function goToAI(myURL) {
    if (myURL==='askai'){
 	   const concierge_active=false;
 	   if (concierge_active){window.location.href = href1;}
-	   else{textAlert = alert('➤ George s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');}
+	   else{
+		   textAlert = alert('➤ George s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');
+	   }
    }
 }
 (function () {
