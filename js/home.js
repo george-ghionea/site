@@ -3,11 +3,9 @@ $(document).ready(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
 		resizable: false,   
-        buttons: {
-			/**
-            Contact: function() { window.location.href = '';},
-            Services: function() {window.location.href = '';},
-			*/
+        buttons: {	
+            //Contact: function() { window.location.href = '';},
+            //Services: function() {window.location.href = '';},
 			Close: function() {
                 $(this).dialog("close");
             }
