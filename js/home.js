@@ -4,8 +4,10 @@ $(document).ready(function() {
         modal: true,
 		resizable: false,   
         buttons: {
-            //Contact: function() { window.location.href = '';},
-            //Services: function() {window.location.href = '';},
+			/**
+            Contact: function() { window.location.href = '';},
+            Services: function() {window.location.href = '';},
+			*/
 			Close: function() {
                 $(this).dialog("close");
             }
