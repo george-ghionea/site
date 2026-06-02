@@ -44,17 +44,19 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function infoZone(myZone) {
+   var hrefContact ="https"
+	               +"://"
+		           +"gghionea"
+		           +".my.canva.site"
+			       +"/contact";
    if (myZone === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ Git Hub"+"<br>"+"&nbsp;➠ Don’t hesitate to drop me a line !";}
+   document.getElementById("alertchoice").innerHTML = "♾️Git Hub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";}
    if (myZone === 'gem') {  
-   document.getElementById("alertchoice").innerHTML = "♾️ Gemini"+"<br>"+"&nbsp;➠ Questions ? Ask Me or Gemini !";}  
+   document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";} 
    if (myZone === 'ais') { 
-   /**
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to contact Me or "+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>My Concierge</button>";}
-   */
-   document.getElementById("alertchoice").innerHTML = "♾️ AI Studio"+"<br>"+"&nbsp;➠ Feel free to reach out for assistance ";}
+   document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";}
    if (myZone === 'ai_') {  
-   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>";}
+   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";}'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>";}
 }
 function goToWhere(myURL) {
    var href1 ="https"
