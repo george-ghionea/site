@@ -44,11 +44,17 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function infoZone(myZone) {
-	var hrefContact ="https"
-	                +"://"
-		            +"gghionea"
-		            +".my.canva.site"
-			        +"/contact";
+   /**
+   var hrefContact ="https"
+	               +"://"
+		           +"gghionea"
+		           +".my.canva.site"
+			       +"/contact";
+   */
+   var hrefContact ="mailto:"
+	               +"george.ghionea"
+		           +"@consultant"
+			       +".com";
    if (myZone === 'git') {  
    document.getElementById("alertchoice").innerHTML = "♾️Git Hub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">Contact Me</a>";}
    if (myZone === 'gem') {  
