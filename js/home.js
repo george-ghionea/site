@@ -35,7 +35,7 @@ function fillAlert(varAlert){
    if (varAlert === 'abo') {
        textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else if (varAlert === 'askai') {
-       textAlert = alert(' ➤ George\'s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');
+       textAlert = alert('George\'s AI Concierge says :\n ▪ Oops! George just turned me off \n ▪ Please ask him to turne me on !');
    } else {
        textAlert = alert(' not set !');
    }
@@ -92,9 +92,26 @@ function goToAI(myURL) {
 	   const concierge_active=false;
 	   if (concierge_active){window.location.href = href1;}
 	   else{
-		   textAlert = alert('➤ George s AI Concierge says :\n ➠ Oops! George just turned me off \n ➠ Please ask him to turne me on !');
+		   openAIDialog();
 	   }
    }
+}
+function openAIDialog(){
+  var txtMsg ="George's AI Concierge says :"
+	         +"<br><li>"
+		     +"Oops! George just turned me off"
+		     +"<li>"
+		     +"Please ask him to turne me on !";	
+  $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
+  $("#dialogAI").dialog({
+        modal: true,
+		resizable: false,   
+        buttons: {
+			Close: function() {
+                $(this).dialog("close");
+            }
+       }
+  });	  
 }
 (function () {
 var yEl = document.getElementById('year');
