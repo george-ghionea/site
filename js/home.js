@@ -3,13 +3,6 @@ $(document).ready(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
 		resizable: false,  
-		/** 
-        buttons: {
-			Close: function() {
-                $(this).dialog("close");
-            }
-        }
-	    */
 		buttons: {
 			Close: {
 				class: "btnAiMsg",
@@ -46,9 +39,6 @@ function fillAlert(varAlert){
    if (varAlert === 'abo') {
        textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else if (varAlert === 'askai') {
-       /**
-       textAlert = alert('George\'s AI Concierge says :\n ▪ Oops! George just turned me off \n ▪ Please ask him to turne me on !');
-	   */
 	   openAIDialog();
    } else {
        textAlert = alert(' not set !');
@@ -121,10 +111,14 @@ function openAIDialog(){
         modal: true,
 		resizable: false,   
         buttons: {
-			Close: function() {
-                $(this).dialog("close");
+			Close: {
+				class: "btnAiMsg",
+				text: "Close",
+                click: function() {
+                    $(this).dialog("close");
+                }
             }
-       }
+        }		   
   });	  
 }
 (function () {
