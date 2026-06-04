@@ -2,12 +2,23 @@ $(document).ready(function() {
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
-		resizable: false,   
+		resizable: false,  
+		/** 
         buttons: {
 			Close: function() {
                 $(this).dialog("close");
             }
-       }
+        }
+	    */
+		buttons: {
+			Close: {
+				class: "btnAiMsg",
+				text: "Close",
+                click: function() {
+                    $(this).dialog("close");
+                }
+            }
+        }		   
     });
   });	
 });
@@ -35,7 +46,10 @@ function fillAlert(varAlert){
    if (varAlert === 'abo') {
        textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else if (varAlert === 'askai') {
+       /**
        textAlert = alert('George\'s AI Concierge says :\n ▪ Oops! George just turned me off \n ▪ Please ask him to turne me on !');
+	   */
+	   openAIDialog();
    } else {
        textAlert = alert(' not set !');
    }
@@ -135,5 +149,5 @@ const options2 = {timeZone: 'America/New_York',
                  hour: '2-digit',
                  minute: '2-digit',
 };
-document.getElementById("timeLocale").innerHTML = "🌐Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = "🌐America / New York : "+d2.toLocaleDateString('en-US', options2);	
+document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
