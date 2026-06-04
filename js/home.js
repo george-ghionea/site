@@ -101,11 +101,11 @@ function goToAI(myURL) {
    }
 }
 function openAIDialog(){
-  var txtMsg ="George's AI Concierge says :"
-	         +"<br><li>"
-		     +"Oops! George just turned me off"
+  var txtMsg ="<li>"
+		     +"Oops !"
+			 +"<br><b>George</b> just turned me off"
 		     +"<li>"
-		     +"Please ask him to turne me on !";	
+		     +"Please ask him to <b>turne me on</b> !";	
   $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
   $("#dialogAI").dialog({
         modal: true,
