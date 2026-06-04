@@ -58,11 +58,11 @@ function infoZone(myZone) {
 		           +"@consultant"
 			       +".com";
    if (myZone === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a>";}
+   document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";}
    if (myZone === 'gem') {  
-   document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a>";} 
+   document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";} 
    if (myZone === 'ais') { 
-   document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a>";}
+   document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";}
    if (myZone === 'ai_') {  
    document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";}
 }
