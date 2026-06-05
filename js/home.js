@@ -101,11 +101,15 @@ function goToAI(myURL) {
    }
 }
 function openAIDialog(){
-  var txtMsg ="<li>"
-		     +"Oops !"
-			 +"<br><b>George</b> just turned me off"
-		     +"<li>"
-		     +"Please ask him to <b>turne me on</b> !";	
+  var hrefContact ="mailto:"
+	              +"george.ghionea"
+		          +"@consultant"
+			      +".com";
+  var txtMsg ="Oops!"
+			 +"I've just been turned off."
+		     +"Please ask/" 
+			 +"<a href="+hrefContact+">e-mail</a>\n"
+			 +"George to turne me on!";
   $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
   $("#dialogAI").dialog({
         modal: true,
