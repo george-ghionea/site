@@ -1,3 +1,8 @@
+/**
+The AI dialog will be initialized
+and displayed on the appropriate
+window
+*/
 $(document).ready(function() {
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
@@ -57,15 +62,24 @@ function infoZone(myZone) {
 	               +"george.ghionea"
 		           +"@consultant"
 			       +".com";
-   if (myZone === 'git') {  
-   document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";}
-   if (myZone === 'gem') {  
-   document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";} 
-   if (myZone === 'ais') { 
-   document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";}
-   if (myZone === 'ai_') {  
-   document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";}
-}
+   switch (myZone) {
+     case 'git':
+       document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       break;
+     case 'gem':
+       document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       break;
+     case 'ais':
+       document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       break;
+     case 'ai_':
+       document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
+       break;
+     default:
+	   textAlert = alert(' not set !');
+       break;//exit
+   }			   
+} 
 function goToWhere(myURL) {
    var href1 ="https"
 	         +"://"
@@ -77,8 +91,17 @@ function goToWhere(myURL) {
 		     +"gghionea"
 		     +".my.canva.site"
 			 +"/services";
-   if (myURL==='con'){window.location.href = href1;}
-   if (myURL==='ser'){window.location.href = href2;} 
+   switch(myURL) {
+     case 'con':
+       window.location.href = href1;
+       break;
+     case 'ser':
+       window.location.href = href2;
+       break;
+     default:
+	   textAlert = alert(' not set !');
+       break;//exit
+   }		 
 }
 function goToAI(myURL) {
    var href1 ="https"
@@ -94,6 +117,11 @@ function goToAI(myURL) {
 		     +".app";		 
    if (myURL==='askai'){
 	   const concierge_active=false;
+	   /**
+       The AI dialog will be initialized
+       and displayed on the appropriate
+       window
+       */
 	   if (concierge_active){window.location.href = href1;}
 	   else{
 		   openAIDialog();
