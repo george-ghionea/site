@@ -2,7 +2,6 @@
 2026/start
 */
 $(document).ready(function() {
-	document.getElementById("alertchoice").innerHTML = "";
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
@@ -94,13 +93,13 @@ function goToWhere(myURL) {
    switch(myURL) {
          case 'con':
 	       if (cva) {
-	           document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+	           document.getElementById("alertchoice").innerHTML = "♾️";
 	           window.location.href = href1;}
 	       else{textAlert = alert(' not set !');}
            break;
          case 'ser':
 	       if (cva) {
-	          document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+	          document.getElementById("alertchoice").innerHTML = "♾️";
               window.location.href = href2;}
 		   else{textAlert = alert(' not set !');}
            break;
@@ -130,7 +129,7 @@ function goToAI(myURL) {
        window
        */
 	   if (concierge_active){
-	       document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+	       document.getElementById("alertchoice").innerHTML = "♾️";
 		   window.location.href = href1;}else{
 		   openAIDialog();
 	   }
