@@ -1,7 +1,5 @@
 /**
-The AI dialog will be initialized
-and displayed on the appropriate
-window
+2026/start
 */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
@@ -42,7 +40,7 @@ function pickColor(myColor) {
 function fillAlert(varAlert){
    let textAlert;
    if (varAlert === 'abo') {
-       textAlert = alert(' ➤ Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
+       textAlert = alert('Think, Build, Share, Collaborate.\n ➠ Questions ?\n ➠ Contact me !');
    } else if (varAlert === 'askai') {
 	   openAIDialog();
    } else {
@@ -81,6 +79,7 @@ function infoZone(myZone) {
    }			   
 } 
 function goToWhere(myURL) {
+   const cva=true;
    var href1 ="https"
 	         +"://"
 		     +"gghionea"
@@ -92,18 +91,25 @@ function goToWhere(myURL) {
 		     +".my.canva.site"
 			 +"/services";
    switch(myURL) {
-     case 'con':
-       window.location.href = href1;
-       break;
-     case 'ser':
-       window.location.href = href2;
-       break;
-     default:
-	   textAlert = alert(' not set !');
-       break;//exit
+         case 'con':
+	       if (cva) {
+	           document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+	           window.location.href = href1;}
+	       else{textAlert = alert(' not set !');}
+           break;
+         case 'ser':
+	       if (cva) {
+	          document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+              window.location.href = href2;}
+		   else{textAlert = alert(' not set !');}
+           break;
+         default:
+	       textAlert = alert(' not set !');
+           break;//exit
    }		 
 }
 function goToAI(myURL) {
+   const concierge_active=false;
    var href1 ="https"
 	         +"://"
 		     +"www"
@@ -122,11 +128,12 @@ function goToAI(myURL) {
        and displayed on the appropriate
        window
        */
-	   if (concierge_active){window.location.href = href1;}
-	   else{
+	   if (concierge_active){
+	       document.getElementById("alertchoice").innerHTML = "♾️Wait...";
+		   window.location.href = href1;}else{
 		   openAIDialog();
 	   }
-   }
+   }else{textAlert = alert(' not set !');}
 }
 function openAIDialog(){
   var hrefContact ="mailto:"
