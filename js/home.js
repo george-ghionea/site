@@ -2,6 +2,7 @@
 2026/start
 */
 $(document).ready(function() {
+	document.getElementById("alertchoice").innerHTML = "";
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
