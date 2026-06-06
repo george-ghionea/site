@@ -1,5 +1,5 @@
 /**
-2026/start
+2026 - start
 */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
@@ -122,7 +122,6 @@ function goToAI(myURL) {
 		     +".run"
 		     +".app";		 
    if (myURL==='askai'){
-	   const concierge_active=false;
 	   /**
        The AI dialog will be initialized
        and displayed on the appropriate
@@ -184,3 +183,6 @@ const options2 = {timeZone: 'America/New_York',
 };
 document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
+/**
+2026 - end
+*/
