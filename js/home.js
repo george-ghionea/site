@@ -1,5 +1,5 @@
 /**
-2026 - start
+06/07/2026 - start
 */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
@@ -26,7 +26,7 @@ function defaultSt(varSt) {
 		document.body.style.color = "#000000";
 		document.body.style.zoom = "100%";
    } else {
-     textAlert = alert(' not set !');
+     textAlert = alert('Not Set !');
    }  
 }
 function zoomInOut(myZoom) {
@@ -44,7 +44,7 @@ function fillAlert(varAlert){
    } else if (varAlert === 'askai') {
 	   openAIDialog();
    } else {
-       textAlert = alert(' not set !');
+       textAlert = alert('Not Set !');
    }
    document.getElementById("text").innerHTML = textAlert;
 }
@@ -71,15 +71,17 @@ function infoZone(myZone) {
        document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
        break;
      case 'ai_':
-       document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
+       document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
        break;
      default:
-	   textAlert = alert(' not set !');
+	   textAlert = alert('Not Set !');
        break;//exit
    }			   
 } 
 function goToWhere(myURL) {
    const cva=true;
+   var cont_="Contact";
+   var serv_="Services";
    var href1 ="https"
 	         +"://"
 		     +"gghionea"
@@ -93,23 +95,24 @@ function goToWhere(myURL) {
    switch(myURL) {
          case 'con':
 	       if (cva) {
-	           document.getElementById("alertchoice").innerHTML = "♾️";
+	           document.getElementById("alertchoice").innerHTML = "♾️"+cont_;
 	           window.location.href = href1;}
-	       else{textAlert = alert(' not set !');}
+	       else{textAlert = alert('Not Set !');}
            break;
          case 'ser':
 	       if (cva) {
-	          document.getElementById("alertchoice").innerHTML = "♾️";
+	          document.getElementById("alertchoice").innerHTML = "♾️"+serv_;
               window.location.href = href2;}
-		   else{textAlert = alert(' not set !');}
+		   else{textAlert = alert('Not Set !');}
            break;
          default:
-	       textAlert = alert(' not set !');
+	       textAlert = alert('Not Set !');
            break;//exit
    }		 
 }
 function goToAI(myURL) {
    const concierge_active=false;
+   var conc_="Concierge";
    var href1 ="https"
 	         +"://"
 		     +"www"
@@ -120,7 +123,7 @@ function goToAI(myURL) {
 		     +"ai-presentation-7"
 		     +".europe-west2"
 		     +".run"
-		     +".app";		 
+		     +".app";	
    if (myURL==='askai'){
 	   /**
        The AI dialog will be initialized
@@ -128,22 +131,22 @@ function goToAI(myURL) {
        window
        */
 	   if (concierge_active){
-	       document.getElementById("alertchoice").innerHTML = "♾️";
+	       document.getElementById("alertchoice").innerHTML = "♾️"+conc_;
 		   window.location.href = href1;}else{
 		   openAIDialog();
 	   }
-   }else{textAlert = alert(' not set !');}
+   }else{textAlert = alert('Not Set !');}
 }
 function openAIDialog(){
   var hrefContact ="mailto:"
 	              +"george.ghionea"
 		          +"@consultant"
 			      +".com";
-  var txtMsg ="Oops!"
-			 +"I've just been turned off."
-		     +"Please ask/" 
+  var txtMsg ="Oops ! "
+			 +"I've just been turned off. "
+		     +"Please ask / " 
 			 +"<a href="+hrefContact+">e-mail</a>\n"
-			 +"George to turne me on!";
+			 +"George to turne me on !";
   $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
   $("#dialogAI").dialog({
         modal: true,
@@ -184,5 +187,5 @@ const options2 = {timeZone: 'America/New_York',
 document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
 /**
-2026 - end
+06/07/2026 - end
 */
