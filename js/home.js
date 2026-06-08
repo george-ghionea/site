@@ -138,15 +138,18 @@ function goToAI(myURL) {
    }else{textAlert = alert('Not Set !');}
 }
 function openAIDialog(){
+  var style_msg = "<p style="+"'color: #0000ff;'"+">";
   var hrefContact ="mailto:"
 	              +"george.ghionea"
 		          +"@consultant"
 			      +".com";
-  var txtMsg ="Oops ! "
+  var txtMsg =style_msg
+	         +"Oops ! "
 			 +"I've just been turned off. "
 		     +"Please ask / " 
 			 +"<a href="+hrefContact+">e-mail</a>\n"
-			 +"George to turne me on !";
+			 +"George to turne me on !"
+	         +"</p>";
   $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
   $("#dialogAI").dialog({
         modal: true,
