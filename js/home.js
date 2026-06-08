@@ -62,13 +62,13 @@ function infoZone(myZone) {
 			       +".com";
    switch (myZone) {
      case 'git':
-       document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠ <a href="+hrefContact+">e-mail</a> me (en-usa,fr,ro)";
        break;
      case 'gem':
-       document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       document.getElementById("alertchoice").innerHTML = "♾️Gemini"+"<br>"+"➠ Questions ? Ask Me or Gemini"+"<br>"+"➠ <a href="+hrefContact+">e-mail</a> me (en-usa,fr,ro)";
        break;
      case 'ais':
-       document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠&nbsp;<a href="+hrefContact+">e-mail me</a> (en-usa,fr,ro)";
+       document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠ <a href="+hrefContact+">e-mail</a> me (en-usa,fr,ro)";
        break;
      case 'ai_':
        document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
