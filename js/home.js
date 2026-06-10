@@ -70,9 +70,14 @@ function infoZone(myZone) {
      case 'ais':
        document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠ <a href="+hrefContact+">e-mail</a> me (en-usa,fr,ro)";
        break;
+       case 'ai_':
+       document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = myConcierge()>Concierge</button>"+"<br>";
+       break;	   
+	 /**  
      case 'ai_':
        document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
        break;
+	 */  
      default:
 	   textAlert = alert('Not Set !');
        break;//exit
@@ -189,6 +194,49 @@ const options2 = {timeZone: 'America/New_York',
 };
 document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
+function myConcierge(){
+  $(document).ready(function() {
+	var txtMsg ="<p style="+"'color: red;'"+">"+" ➤Enterprise Software Architecture</p>"+"<p style="+"'color: blue;'"+">"+"<p style="+"'color: blue;margin: 25px;'"+">"+"➠Project Management (IT)<br>➠Cybersecurity, Java/J2EE<br>➠Cloud Infrastructure<br>➠AI, LLMs, AWS/GCP<br>➠Microservices, Oracle/SQL</p></p>";  
+    $('#openwindow').each(function() {
+    $('<div/>', {'class':'btnAiMsg', 'id':'link-'+($(this).index()+1)})
+        .html($('<iframe/>', {
+            'src' : $(this).attr('href'),
+            'style' :'width:100%; height:100%;border:none;'
+        })).appendTo('body')//.html(txtMsg)
+        .dialog({
+			modal: true,
+		    resizable: false,
+			'title' : 'George\'s AI Concierge',
+            'width' : 400,
+            'height' :320,
+			//'background' : 'red',
+			//'background-color': 'green',
+            buttons: {
+			  Services:{
+				class: "btnAiMsg",
+				text: "Services Offering",
+				click: function() {
+                window.location.href = 'https://gghionea.my.canva.site/services'; }},	
+			  Close: {
+				class: "btnAiMsg",
+				text: "Close",
+                click: function() {
+                    $(this).dialog("close");
+                }
+              }
+            }		   
+        });
+    });
+  });
+}
+function formContact(){
+ var hrefContact ="https://docs.google.com/"
+	             +"forms/d/e/"
+		         +"1FAIpQLSetomZDiDSvDm09SzruXYxl85H8hjQtzbmHAHWmtrdkmpIMgA/"
+			     +"viewform";
+window.location.href = hrefContact;	
+return hrefContact;
+}
 /**
 06/07/2026 - end
 */
