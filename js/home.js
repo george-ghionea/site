@@ -196,6 +196,7 @@ document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
 function myConcierge(){
   $(document).ready(function() {
+	var serv_="Services";
 	var txtMsg ="<p style="+"'color: red;'"+">"+" ➤Enterprise Software Architecture</p>"+"<p style="+"'color: blue;'"+">"+"<p style="+"'color: blue;margin: 25px;'"+">"+"➠Project Management (IT)<br>➠Cybersecurity, Java/J2EE<br>➠Cloud Infrastructure<br>➠AI, LLMs, AWS/GCP<br>➠Microservices, Oracle/SQL</p></p>";  
     $('#openwindow').each(function() {
     $('<div/>', {'class':'btnAiMsg', 'id':'link-'+($(this).index()+1)})
@@ -207,8 +208,8 @@ function myConcierge(){
 			modal: true,
 		    resizable: false,
 			'title' : 'George\'s AI Concierge',
-            'width' : 400,
-            'height' :320,
+            'width' : 430,
+            'height' :300,
 			//'background' : 'red',
 			//'background-color': 'green',
             buttons: {
@@ -216,6 +217,7 @@ function myConcierge(){
 				class: "btnAiMsg",
 				text: "Services Offering",
 				click: function() {
+				document.getElementById("alertchoice").innerHTML = "♾️"+serv_;	
                 window.location.href = 'https://gghionea.my.canva.site/services'; }},	
 			  Close: {
 				class: "btnAiMsg",
