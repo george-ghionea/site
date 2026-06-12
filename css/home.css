@@ -35,6 +35,11 @@
 	color: blue;
 	display: none;   
 	}	
+   .ui-widget-header,.ui-state-default, ui-button {
+    background:#008CBA;              
+    color: #ffffff;                
+    font-weight: normal;            
+    }
    .mirror {
     border-collapse: collapse;
     background-color: #b3ccff;
