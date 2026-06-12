@@ -16,6 +16,8 @@ $(document).ready(function() {
             }
         }		   
     });
+	document.getElementById("alertchoice").innerHTML = "♾️"
+	+"About<br>"+"➠ "+cont_	+"<br>➠ "+serv_;
   });	
 });
 function defaultSt(varSt) {
@@ -85,8 +87,6 @@ function infoZone(myZone) {
 } 
 function goToWhere(myURL) {
    const cva=true;
-   var cont_="Contact";
-   var serv_="Services";
    var href1 ="https"
 	         +"://"
 		     +"gghionea"
@@ -117,7 +117,6 @@ function goToWhere(myURL) {
 }
 function goToAI(myURL) {
    const concierge_active=false;
-   var conc_="Concierge";
    var href1 ="https"
 	         +"://"
 		     +"www"
@@ -174,8 +173,11 @@ function openAIDialog(){
 var yEl = document.getElementById('year');
 if (yEl) yEl.textContent = new Date().getFullYear();
 })();
-const d1 = new Date();
-const d2 = new Date();
+var cont_= "Contact";
+var serv_= "Services Offering";
+var conc_="Concierge";
+const d_EUR = new Date();
+const d_USA = new Date();
 const options1 = {timeZone: 'Europe/Bucharest', 
                  weekday: 'long',
                  year: 'numeric',
@@ -192,11 +194,14 @@ const options2 = {timeZone: 'America/New_York',
                  hour: '2-digit',
                  minute: '2-digit',
 };
-document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d1.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d2.toLocaleDateString('en-US', options2);	
+document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d_EUR.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d_USA.toLocaleDateString('en-US', options2);	
 function myConcierge(){
   $(document).ready(function() {
-	var serv_="Services";
+	//var serv_="Services";
+	var hrefC ="https://"
+	          +"gghionea.my.canva.site"
+			  +"/services";
 	var txtMsg ="<p style="+"'color: red;'"+">"+" ➤Enterprise Software Architecture</p>"+"<p style="+"'color: blue;'"+">"+"<p style="+"'color: blue;margin: 25px;'"+">"+"➠Project Management (IT)<br>➠Cybersecurity, Java/J2EE<br>➠Cloud Infrastructure<br>➠AI, LLMs, AWS/GCP<br>➠Microservices, Oracle/SQL</p></p>";  
     $('#openwindow').each(function() {
     $('<div/>', {'class':'btnAiMsg', 'id':'link-'+($(this).index()+1)})
@@ -218,7 +223,7 @@ function myConcierge(){
 				text: "Services Offering",
 				click: function() {
 				document.getElementById("alertchoice").innerHTML = "♾️"+serv_;	
-                window.location.href = 'https://gghionea.my.canva.site/services'; }},	
+                window.location.href = hrefC;}},	
 			  Close: {
 				class: "btnAiMsg",
 				text: "Close",
