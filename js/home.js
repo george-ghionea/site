@@ -6,6 +6,8 @@ $(document).ready(function() {
        $("#dialogBoxMe").dialog({
         modal: true,
 		resizable: false,  
+	    'width' : 450,
+        'height' :390,	 
 		buttons: {
 			Close: {
 				class: "btnAiMsg",
