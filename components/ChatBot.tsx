@@ -6,7 +6,7 @@ import { Message } from '../types';
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: 'Hi! I\'m George\'s AI concierge. Ask me anything about his experience, skills, or how to contact him!' }
+    { role: 'model', text: 'Hi! I\'m George\'s AI Concierge. Ask me anything about his experience, skills, or how to contact him!' }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
