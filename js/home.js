@@ -210,7 +210,7 @@ function myConcierge(){
         .html($('<iframe/>', {
             'src' : $(this).attr('href'),
             'style' :'width:100%; height:100%;border:none;'
-        })).appendTo('body')//.html(txtMsg)
+        })).appendTo('body').css('overflow', 'hidden')//.html(txtMsg)
         .dialog({
 			modal: true,
 		    resizable: false,
@@ -218,7 +218,7 @@ function myConcierge(){
             'width' : 430,
             'height' :300,
 			//'background' : 'red',
-			//'background-color': 'green',
+			//'background-color' : 'green',
             buttons: {
 			  Services:{
 				class: "btnAiMsg",
