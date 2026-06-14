@@ -1,13 +1,12 @@
-/**
-06/07/2026 - start
-*/
+/** 06/07/2026 - start */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
        $("#dialogBoxMe").dialog({
+		position:{my: mypo_,at: atpo_},
         modal: true,
 		resizable: false,  
-	    'width' : 450,
-        'height' :390,	 
+	    'width'  : 450,
+        'height' : 390,	 
 		buttons: {
 			Close: {
 				class: "btnAiMsg",
@@ -53,13 +52,6 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function infoZone(myZone) {
-   /**
-   var hrefContact ="https"
-	               +"://"
-		           +"gghionea"
-		           +".my.canva.site"
-			       +"/contact";
-   */
    var hrefContact ="mailto:"
 	               +"george.ghionea"
 		           +"@consultant"
@@ -76,12 +68,7 @@ function infoZone(myZone) {
        break;
        case 'ai_':
        document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = myConcierge()>Concierge</button>"+"<br>";
-       break;	   
-	 /**  
-     case 'ai_':
-       document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = goToAI('"+"askai"+"')>Concierge</button>"+"<br>";
-       break;
-	 */  
+       break;	     
      default:
 	   textAlert = alert('Not Set !');
        break;//exit
@@ -130,12 +117,7 @@ function goToAI(myURL) {
 		     +".europe-west2"
 		     +".run"
 		     +".app";	
-   if (myURL==='askai'){
-	   /**
-       The AI dialog will be initialized
-       and displayed on the appropriate
-       window
-       */
+   if (myURL==='askai'){	  
 	   if (concierge_active){
 	       document.getElementById("alertchoice").innerHTML = "♾️"+conc_;
 		   window.location.href = href1;}else{
@@ -177,7 +159,9 @@ if (yEl) yEl.textContent = new Date().getFullYear();
 })();
 var cont_= "Contact";
 var serv_= "Services Offering";
-var conc_="Concierge";
+var conc_= "Concierge";
+var mypo_= "left+275 top+5";
+var atpo_= "left+275 top+5";
 const d_EUR = new Date();
 const d_USA = new Date();
 const options1 = {timeZone: 'Europe/Bucharest', 
@@ -200,7 +184,6 @@ document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d_USA.toLocaleDateString('en-US', options2);	
 function myConcierge(){
   $(document).ready(function() {
-	//var serv_="Services";
 	var hrefC ="https://"
 	          +"gghionea.my.canva.site"
 			  +"/services";
@@ -212,13 +195,12 @@ function myConcierge(){
             'style' :'width:100%; height:100%;border:none;'
         })).appendTo('body').css('overflow', 'hidden')//.html(txtMsg)
         .dialog({
+			position:{my: mypo_,at: atpo_},
 			modal: true,
 		    resizable: false,
 			'title' : 'George\'s AI Concierge',
             'width' : 430,
-            'height' :300,
-			//'background' : 'red',
-			//'background-color' : 'green',
+            'height': 360,
             buttons: {
 			  Services:{
 				class: "btnAiMsg",
@@ -241,11 +223,9 @@ function myConcierge(){
 function formContact(){
  var hrefContact ="https://docs.google.com/"
 	             +"forms/d/e/"
-		         +"1FAIpQLSetomZDiDSvDm09SzruXYxl85H8hjQtzbmHAHWmtrdkmpIMgA/"
+		         +"1FAIpQLSeXj8aZC6nrFMCpgMlp9069989BVZK2UMxD_jwc7psGPbI4qQ/"
 			     +"viewform";
 window.location.href = hrefContact;	
 return hrefContact;
 }
-/**
-06/07/2026 - end
-*/
+/** 06/07/2026 - end */
