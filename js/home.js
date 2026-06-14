@@ -7,6 +7,8 @@ $(document).ready(function() {
 		resizable: false,  
 	    'width'  : 450,
         'height' : 390,	 
+		'show'   : show_,
+		'hide'   : hide_,  
 		buttons: {
 			Close: {
 				class: "btnAiMsg",
@@ -162,6 +164,8 @@ var serv_= "Services Offering";
 var conc_= "Concierge";
 var mypo_= "left+275 top+5";
 var atpo_= "left+275 top+5";
+var show_= "slide";
+var hide_= "slide";
 const d_EUR = new Date();
 const d_USA = new Date();
 const options1 = {timeZone: 'Europe/Bucharest', 
@@ -201,6 +205,8 @@ function myConcierge(){
 			'title' : 'George\'s AI Concierge',
             'width' : 430,
             'height': 360,
+			'show'  : show_,
+		    'hide'  : hide_,	
             buttons: {
 			  Services:{
 				class: "btnAiMsg",
