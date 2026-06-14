@@ -25,7 +25,7 @@
    }	
    .myDiv1{
 	width: 514px;  /*520 in prod*/
-	background-color: #f2f2f2;/*#f2f2f2 in prod*/
+	background-color: #ffffff;/*#f2f2f2 in prod*/
 	border:2px light gray; 
 	border-radius: 5px;
 	border-collapse: collapse;
