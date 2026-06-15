@@ -1,7 +1,7 @@
 /** 06/07/2026 - start */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
-       $("#dialogBoxMe").dialog({
+    $("#dialogBoxMe").dialog({
 		position:{my: mypo_,at: atpo_},
         modal: true,
 		resizable: false,  
@@ -12,7 +12,7 @@ $(document).ready(function() {
 		buttons: {
 			Close: {
 				class: btnAiMsg,
-				text:  btnClose,
+				text : btnClose,
                 click: function() {
                     $(this).dialog("close");
                 }
@@ -54,7 +54,6 @@ function fillAlert(varAlert){
    document.getElementById("text").innerHTML = textAlert;
 }
 function infoZone(myZone) {
-   //var hrefEmailC_ ="mailto:";
    switch (myZone) {
      case 'git':
        document.getElementById("alertchoice").innerHTML = "♾️GitHub"+"<br>"+"➠ Don’t hesitate to drop me a line"+"<br>"+"➠ <a href="+hrefEmailC_+">e-mail</a> me (en-usa,fr,ro)";
@@ -75,8 +74,6 @@ function infoZone(myZone) {
 } 
 function goToWhere(myURL) {
    const cva=true;
-   //var hrefcocva_ ="https";
-   //var hrefsecva_ ="https";
    switch(myURL) {
          case 'con':
 	       if (cva) {
@@ -97,8 +94,6 @@ function goToWhere(myURL) {
 }
 function goToAI(myURL) {
    const concierge_active=false;
-   //var href1tec_ ="https";
-   //var href2ais_ ="https";	
    if (myURL==='askai'){	  
 	   if (concierge_active){
 	       document.getElementById("alertchoice").innerHTML = "♾️"+conc_;
@@ -108,10 +103,6 @@ function goToAI(myURL) {
    }else{textAlert = alert('Not Set !');}
 }
 function openAIDialog(){
-  /**	
-  var style_msg = "<p style="+"'color: #0000ff;'"+">";
-  var txtMsg =style_msg+"Oops ! "+"I've just been turned off. "+"Please ask / "+"<a href="+hrefEmailC_+">e-mail</a>\n"+"George to turne me on !"+"</p>";
-  */
   $("#dialogAI").html(txtMsg).dialog({modal: true,resizable: false}); 
   $("#dialogAI").dialog({
         modal: true,
@@ -119,7 +110,7 @@ function openAIDialog(){
         buttons: {
 			Close: {
 				class: btnAiMsg,
-				text:  btnClose,
+				text : btnClose,
                 click: function() {
                     $(this).dialog("close");
                 }
@@ -128,39 +119,35 @@ function openAIDialog(){
   });	  
 }
 (function () {
-var yEl = document.getElementById('year');
-if (yEl) yEl.textContent = new Date().getFullYear();
+var 
+/**year*/
+year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 })();
-var cont_= "Contact";
-var serv_= "Services Offering";
-var conc_= "Concierge";
-var mypo_= "left+275 top+5";
-var atpo_= "left+275 top+5";
-var show_= "slide";
-var hide_= "slide";
-var titl_= "George\'s AI Concierge";
-var btnClose = "Close";
-var btnAiMsg = "btnAiMsg";
-var hrefmycvas_="gghionea.my.canva.site";
-var hrefEmailC_="mailto:"+"george.ghionea@consultant.com";
-var hrefcocva_="https://"+hrefmycvas_+"/contact";
-var hrefsecva_="https://"+hrefmycvas_+"/services";		
-var href1tec_="https://"+"www.hitech.usa";
-var href2ais_="https://"+"ai-presentation-7.europe-west2.run.app";		
-const d_EUR = new Date();
-const d_USA = new Date();
-const options1 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};
-const options2 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};
+var 
+/**attr*/
+cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
+mypo_= "left+275 top+5",atpo_= "left+275 top+5",
+show_= "slide",hide_= "slide",box_title_= "George\'s AI Concierge",
+btnClose = "Close", btnAiMsg = "btnAiMsg",
+/**hrefs*/
+hrefmycvas_="gghionea.my.canva.site",
+hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
+hrefcocva_="https://"+hrefmycvas_+"/contact",
+hrefsecva_="https://"+hrefmycvas_+"/services",		
+href1tec_="https://"+"www.high.tech.usa",
+href2ais_="https://"+"ai-presentation-7.europe-west2.run.app";//	
+let 
+/**options*/
+d_EUR = new Date(),d_USA = new Date(),
+options1 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',},
+options2 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};//
 document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d_EUR.toLocaleDateString('ro-EU', options1);	
 document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d_USA.toLocaleDateString('en-US', options2);	
 function myConcierge(){
   $(document).ready(function() {
-	//var href2cva_ ="https://";
-	/**
-	var txtMsg ="<p style="+"'color: red;'"+">"+" ➤Enterprise Software Architecture</p>"+"<p style="+"'color: blue;'"+">"+"<p style="+"'color: blue;margin: 25px;'"+">"+"➠Project Management (IT)<br>➠Cybersecurity, Java/J2EE<br>➠Cloud Infrastructure<br>➠AI, LLMs, AWS/GCP<br>➠Microservices, Oracle/SQL</p></p>"; 
-    */	
-    $('#openwindow').each(function() {
-    $('<div/>', {'class':'btnAiMsg', 'id':'link-'+($(this).index()+1)})
+  $('#openwindow').each(function() {
+  $('<div/>', {'class':'btnAiMsg', 'id':'link-'+($(this).index()+1)})
         .html($('<iframe/>', {
             'src' : $(this).attr('href'),
             'style' :'width:100%; height:100%;border:none;'
@@ -169,7 +156,7 @@ function myConcierge(){
 			position:{my: mypo_,at: atpo_},
 			modal: true,
 		    resizable: false,
-			'title' : titl_,
+			'title' : box_title_,
             'width' : 430,
             'height': 360,
 		    'show'  : show_,
@@ -177,7 +164,7 @@ function myConcierge(){
             buttons: {
 			  Services:{
 				class: btnAiMsg,
-				text: serv_,
+				text : serv_,
 				click: function() {
 				document.getElementById("alertchoice").innerHTML = "♾️"+serv_;	
                 window.location.href = hrefsecva_;}},	
@@ -194,9 +181,11 @@ function myConcierge(){
   });
 }
 function formContact(){
-	var hrefgoogle_="docs.google.com";
-    var hrefformgo_="1FAIpQLSeXj8aZC6nrFMCpgMlp9069989BVZK2UMxD_jwc7psGPbI4qQ";
-    var	hrefform_="https://"+hrefgoogle_+"/forms/d/e/"+hrefformgo_+"/viewform";	
+	var
+	/**form return*/
+	hrefgoogle_="docs.google.com",
+    hrefformgo_="1FAIpQLSeXj8aZC6nrFMCpgMlp9069989BVZK2UMxD_jwc7psGPbI4qQ",
+    hrefform_="https://"+hrefgoogle_+"/forms/d/e/"+hrefformgo_+"/viewform";	
 	window.location.href = hrefform_;
 	return;
 }
