@@ -139,11 +139,14 @@ href1tec_="https://"+"www.high.tech.usa",
 href2ais_="https://"+"ai-presentation-7.europe-west2.run.app";//	
 let 
 /**options*/
-d_EUR = new Date(),d_USA = new Date(),
+d_EUR = new Date(),d_USA = new Date(),d_ASP = new Date(),
 options1 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',},
-options2 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};//
-document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest : "+d_EUR.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = " ▪ America / New York : "+d_USA.toLocaleDateString('en-US', options2);	
+options2 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};
+options3 = {timeZone: 'Asia/Tokyo', weekday: 'long', year: 'numeric', month: 'long',        day: 'numeric', hour: '2-digit', minute: '2-digit',};//
+document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest<br>"+d_EUR.toLocaleDateString('ro-EU', options1);	
+document.getElementById('timeNY').innerHTML = " ▪ America / New York<br>"+d_USA.toLocaleDateString('en-US', options2);
+document.getElementById('timeTokyo').innerHTML = " ▪ Asia - Pacific / Tokyo<br>"+d_ASP.toLocaleDateString('jst-JP', options3);//jst-JP/en-UK	
+/** length test: "Wednesday, September 20, 2026 at 05:49 AM" */
 function myConcierge(){
   $(document).ready(function() {
   $('#openwindow').each(function() {
