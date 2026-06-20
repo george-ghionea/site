@@ -1,4 +1,5 @@
-  <style>
+/* 06/07/2026 - start */
+<style>
    .homescreen{}
    .homescreen1{
     border-collapse: collapse;
@@ -8,23 +9,23 @@
 	border-radius: 10px;	
     }	
    .spacer1{
-	 margin-top: 4px;
-	 margin-bottom: 15px;
-	 padding: 0px;  
-   }
-    .spacer2{
-	 margin-top: 0px;
-	 margin-bottom: 0px;
-	 padding: 0px; 
-	 /*color: red;*/
+	margin-top: 4px;
+	margin-bottom: 15px;
+	padding: 0px;  
+    }
+   .spacer2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px; 
+	/*color: red;*/
 	}
    .spacer3{
-	 margin-top: 0px;
-	 margin-bottom: 4px;
-	 padding: 0px;  
-   }	
+	margin-top: 0px;
+	margin-bottom: 4px;
+	padding: 0px;  
+    }	
    .myDiv1{
-	width: 514px;  /*520 in prod*/
+	width: 516px;  /*520 in prod*/
 	background-color: #ffffff;/*#f2f2f2 in prod*/
 	border:2px light gray; 
 	border-radius: 5px;
@@ -73,7 +74,7 @@
 	border-radius: 5px;   
     border: none;
     color: #ffffff; 
-    padding: 3px 16px;
+    padding: 7px 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -100,5 +101,13 @@
     animation: typing 3s steps(26, end) forwards;  
 	font-weight: 400;                              
     } @keyframes typing {from {width: 0;}to {width: 100%;}} 
+	div.mycontainer {
+        width:520px;
+        overflow:auto;
+	}
+    div.mycontainer div {
+        width:33.3%;  
+        float:left;
+    }
   </style>
-
+  /* 06/07/2026 - end */
