@@ -24,6 +24,11 @@
 	margin-bottom: 4px;
 	padding: 0px;  
     }	
+   .timeZone {
+	margin-top:4px;
+	margin-bottom:4px;
+	text-align:center;
+	}	
    .myDiv1{
 	width: 516px;  /*520 in prod*/
 	background-color: #ffffff;/*#f2f2f2 in prod*/
