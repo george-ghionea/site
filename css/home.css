@@ -3,15 +3,15 @@
    .homescreen{}
    .homescreen1{
     border-collapse: collapse;
-    background-color: #b3ccff;/*#b3ccff in prod #ccccff indigo*/
+    background-color: #b3ccff;
     padding: 10px;
     width:530px;
 	border-radius: 10px;	
     }	
    .spacer1{
-	margin-top: 4px;
-	margin-bottom: 15px;
-	padding: 0px;  
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 2px;
     }
    .spacer2{
 	margin-top: 0px;
@@ -25,17 +25,17 @@
 	padding: 0px;  
     }	
    .timeZone {
-	margin-top:4px;
-	margin-bottom:4px;
+	margin-top:2px;
+	margin-bottom:2px;
 	text-align:center;
 	}	
    .myDiv1{
-	width: 516px;  /*520 in prod*/
-	background-color: #ffffff;/*#f2f2f2 in prod*/
+	width: 516px;  
+	background-color: #ffffff;
 	border:2px light gray; 
 	border-radius: 5px;
 	border-collapse: collapse;
-	padding: 2px;/*2px in prod*/	
+	padding: 2px;	
 	}	
    .myDiv2{
 	color: blue;
@@ -61,7 +61,7 @@
    .parent {
 	display: flex;
     text-align: left; 
-	padding: 2px;/* to be added on prod */
+	padding: 2px;
     }
    .child {
     display: inline-block; 
@@ -86,7 +86,6 @@
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
-	/*opacity: 0.6;*/
     transition: 0.4s;
     }
    .button1 {background-color: #0066cc;}        
