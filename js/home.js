@@ -6,7 +6,7 @@ $(document).ready(function() {
         modal: true,
 		resizable: false,  
 	    'width'  : 450,
-        'height' : 390,	 
+        'height' : 387,	 
 		'show'   : show_,
 		'hide'   : hide_,
 		buttons: {
@@ -30,17 +30,50 @@ function defaultSt(varSt) {
 		document.getElementById("alertchoice").innerHTML = "";
 		document.body.style.color = "#000000";
 		document.body.style.zoom = "100%";
+		myZoom=100;
    } else {
      textAlert = alert('Not Set !');
    }  
 }
-function zoomInOut(myZoom) {
-   document.body.style.zoom = myZoom;
-   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom;
+function zoomInOut(myzoompick) {
+   switch (myzoompick) {
+     case 'zoominn':
+	   if (myZoom !== maxZoom){
+           myZoom=myZoom+10;
+           document.body.style.zoom = myZoom+"%";
+		   if (myZoom == maxZoom){
+			   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+" max";
+		   }else{
+			if (myZoom == 100){document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"optim";}else{
+			document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%";}
+		   }
+	   }
+       break;
+     case 'zoomout':
+	   if (myZoom !== minZoom){
+           myZoom=myZoom-10;
+           document.body.style.zoom = myZoom+"%";
+		   if (myZoom == minZoom){
+			   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"min";
+		   }else{
+			if (myZoom == 100){document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"optim";}else{
+			document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%";}
+		   }
+	   }
+       break;
+     default:
+	   textAlert = alert('Not Set !');
+       break;//exit
+   }			   	
 }
-function pickColor(myColor) {
-   document.body.style.color = myColor;
-   document.getElementById("yourchoice").innerHTML = "color"+"<br>"+myColor;
+function pickColor(mycolorpick) {
+   switch(mycolorpick){
+     case'color1':myColor=color1;break;
+     case'color2':myColor=color2;break;
+     default:textAlert=alert('Not Set !');break;//exit
+   }			   		
+   document.body.style.color= myColor;
+   document.getElementById("yourchoice").innerHTML="color"+"<br>"+myColor;
 }
 function fillAlert(varAlert){
    let textAlert;
@@ -123,7 +156,11 @@ var
 /**year*/
 year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
-})();
+})();//
+/**zoom*/
+var myZoom=100,minZoom=80,maxZoom=130;//
+/**color*/
+color1="#0000cc",color2="#cc0000";//
 var 
 /**attr*/
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
@@ -139,13 +176,13 @@ href1tec_="https://"+"www.high.tech.usa",
 href2ais_="https://"+"ai-presentation-7.europe-west2.run.app";//	
 let 
 /**options*/
-d_EUR = new Date(),d_USA = new Date(),d_ASP = new Date(),
-options1 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',},
-options2 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit',};
-options3 = {timeZone: 'Asia/Tokyo', weekday: 'long', year: 'numeric', month: 'long',        day: 'numeric', hour: '2-digit', minute: '2-digit',};//
-document.getElementById("timeLocale").innerHTML = " ▪ Europe / Bucharest<br>"+d_EUR.toLocaleDateString('ro-EU', options1);	
-document.getElementById('timeNY').innerHTML = " ▪ America / New York<br>"+d_USA.toLocaleDateString('en-US', options2);
-document.getElementById('timeTokyo').innerHTML = " ▪ Asia - Pacific / Tokyo<br>"+d_ASP.toLocaleDateString('jst-JP', options3);//jst-JP/en-UK	
+d_USA = new Date(),d_EUR = new Date(),d_ASP = new Date(),
+options1 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'},
+options2 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'},
+options3 = {timeZone: 'Asia/Tokyo', weekday: 'long', year: 'numeric', month: 'long',        day: 'numeric', hour: '2-digit', minute: '2-digit'};//
+document.getElementById('timeNY').innerHTML = " ▪ America / New York<br>"+d_USA.toLocaleDateString('en-US', options1);//
+document.getElementById("timeEurope").innerHTML = " ▪ Europe / Bucharest<br>"+d_EUR.toLocaleDateString('ro-EU', options2);//	
+document.getElementById('timeTokyo').innerHTML = " ▪ Asia - Pacific / Tokyo<br>"+d_ASP.toLocaleDateString('jst-JP', options3);//jst-JP/en-UK/ja-JP	
 /** length test: "Wednesday, September 20, 2026 at 05:49 AM" */
 function myConcierge(){
   $(document).ready(function() {
