@@ -36,35 +36,19 @@ function defaultSt(varSt) {
    }  
 }
 function zoomInOut(myzoompick) {
-   switch (myzoompick) {
-     case 'zoominn':
-	   if (myZoom !== maxZoom){
-           myZoom=myZoom+10;
-           document.body.style.zoom = myZoom+"%";
-		   if (myZoom == maxZoom){
-			   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+" max";
-		   }else{
-			if (myZoom == 100){document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"optim";}else{
-			document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%";}
-		   }
-	   }
-       break;
-     case 'zoomout':
-	   if (myZoom !== minZoom){
-           myZoom=myZoom-10;
-           document.body.style.zoom = myZoom+"%";
-		   if (myZoom == minZoom){
-			   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"min";
-		   }else{
-			if (myZoom == 100){document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+"optim";}else{
-			document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%";}
-		   }
-	   }
-       break;
-     default:
-	   textAlert = alert('Not Set !');
-       break;//exit
-   }			   	
+   if (myzoompick === 'zoominn') {
+       if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; }
+   } else if (myzoompick === 'zoomout') {
+	   if (myZoom !== minZoom){ myZoom = myZoom - stepZoom; }
+   } else { textAlert = alert('Not Set !'); }
+   document.body.style.zoom = myZoom+"%";
+   switch (myZoom) {
+     case optimalZoom : textZoom = "(optimal)"; break;
+     case minZoom : textZoom = "(min)"; break;
+     case maxZoom : textZoom = "(max)"; break;
+     default : textZoom = ""; break; //exit
+   }	
+   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%"+"<br>"+textZoom;
 }
 function pickColor(mycolorpick) {
    switch(mycolorpick){
@@ -158,7 +142,7 @@ year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 })();//
 /**zoom*/
-var myZoom=100,minZoom=80,maxZoom=130;//
+var myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100;//
 /**color*/
 color1="#0000cc",color2="#cc0000";//
 var 
