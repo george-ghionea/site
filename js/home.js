@@ -9,7 +9,6 @@ $(document).ready(function() {
         'height' : 387,	 
 		'show'   : show_,
 		'hide'   : hide_,
-		//"fade","highlight","slide"
 		buttons: {
 			Close: {
 				class: btnAiMsg,
@@ -220,6 +219,7 @@ function formContact(){
 	return;
 }
 function myDropdown() {
+  document.getElementById("alertchoice").innerHTML = "♾️"+"Social Media"+"<br>"+"➠ Need help ?"+"<br>"+"➠ Get in touch by <a href="+hrefEmailC_+">e-mail</a> or SM channels";
   document.getElementById("myDropdown").classList.toggle("show");
 }
 window.onclick = function(event) {
@@ -234,13 +234,16 @@ window.onclick = function(event) {
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
+	  document.getElementById("myDropdown").classList.toggle("hide");
     }
   }
 }
 function openNav() {
+  document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Opened";
   document.getElementById("myNav").style.width = "100%";
 }
 function closeNav() {
+  document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Closed";
   document.getElementById("myNav").style.width = "0%";
 }
 /** 06/07/2026 - end */
