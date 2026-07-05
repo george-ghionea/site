@@ -9,6 +9,7 @@ $(document).ready(function() {
         'height' : 387,	 
 		'show'   : show_,
 		'hide'   : hide_,
+		//"fade","highlight","slide"
 		buttons: {
 			Close: {
 				class: btnAiMsg,
@@ -35,7 +36,7 @@ function defaultSt(varSt) {
      textAlert = alert('Not Set !');
    }  
 }
-function zoomInOut(myzoompick) {
+function zoomInOut(myzoompick) { 
    if (myzoompick === 'zoominn') {
        if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; }
    } else if (myzoompick === 'zoomout') {
@@ -147,11 +148,16 @@ var myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100;//
 color1="#0000cc",color2="#cc0000";//
 var 
 /**attr*/
+company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",domain_=".com",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
 show_= "slide",hide_= "slide",box_title_= "George\'s AI Concierge",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
 /**hrefs*/
+linkedin_ ="https://"+company1_+domain_+"/in/george-ghionea",
+google_= "https://"+company2_+domain_,
+whatsapp_= "https://"+company3_+domain_,
+twitter_= "https://"+company4_+domain_,
 hrefmycvas_="gghionea.my.canva.site",
 hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
 hrefcocva_="https://"+hrefmycvas_+"/contact",
@@ -212,5 +218,29 @@ function formContact(){
     hrefform_="https://"+hrefgoogle_+"/forms/d/e/"+hrefformgo_+"/viewform";	
 	window.location.href = hrefform_;
 	return;
+}
+function myDropdown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  document.getElementById("linkedin").setAttribute("href",linkedin_);
+  document.getElementById("google").setAttribute("href",google_);
+  document.getElementById("whatsapp").setAttribute("href",whatsapp_);
+  document.getElementById("twitter").setAttribute("href",twitter_);
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
 }
 /** 06/07/2026 - end */
