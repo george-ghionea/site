@@ -1,5 +1,6 @@
 /* 06/07/2026 - start */
 <style>
+/* zone 1 */
    .homescreen{}
    .homescreen1{
     border-collapse: collapse;
@@ -74,7 +75,7 @@
    .btnAiMsg {
     background: #d9d9d9;
     color:  #0000ff;
-    }	
+    }
    .button {
 	border-radius: 5px;   
     border: none;
@@ -88,11 +89,19 @@
     cursor: pointer;
     transition: 0.4s;
     }
-   .button1 {background-color: #0066cc;}        
+   .button1 {background-color: #0066cc;} 
+   .button1cb {background-color: #0066cc;}
+   .button1cr {background-color: #0066cc;}
+   .button1zi {background-color: #0066cc;}  
+   .button1zo {background-color: #0066cc;} 
    .button2 {background-color: #008CBA;}        
    .button3 {background-color: #008CBA;}        
-   .button4 {background-color: #bf4080;}          
+   .button4 {background-color: #bf4080;}   
    .button1:hover {opacity: 0.6;color: #000000;}
+   .button1cb:hover {opacity: 0.6;color: #000000;} 
+   .button1cr:hover {opacity: 0.6;color: #000000;} 
+   .button1zi:hover {opacity: 0.6;color: #000000;} 
+   .button1zo:hover {opacity: 0.6;color: #000000;} 
    .button2:hover {opacity: 0.6;color: #000000;}
    .button3:hover {opacity: 0.6;color: #000000;}
    .button4:hover {opacity: 0.6;color: #000000;}
@@ -103,7 +112,6 @@
     overflow: hidden;     
     white-space: nowrap;  
     animation: typing 3s steps(26, end) forwards;  
-	font-weight: 400;                              
     } @keyframes typing {from {width: 0;}to {width: 100%;}} 
 	div.mycontainer {
         width:520px;
@@ -113,5 +121,103 @@
         width:33.3%;  
         float:left;
     }
-  </style>
-  /* 06/07/2026 - end */
+/* zone 2 */
+.dropbtn {
+  background-color: #0066cc;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius:5px;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #0066cc;
+  opacity: 0.6;color: #000000;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 47px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: blue;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown a:hover {background-color: #ddd;}
+.show {display: block;}
+.linkedin {
+  background: #b3ccff;
+  color: white;
+}
+.google {
+  background: #ffccd0;
+  color: white;
+}
+.whatsapp {
+  background: #cae7d5;
+  color: white;
+}
+.twitter {
+  background: #fff6b3;
+  color: white;
+}
+/* zone 3 */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,100,200,0.6);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+/* 06/07/2026 - end */
