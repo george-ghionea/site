@@ -156,6 +156,10 @@
   display: block;
   text-align: left;
 }
+.dropdown-content.show
+{
+  display: block;
+}
 .dropdown a:hover {background-color: #ddd;}
 .show {display: block;}
 .linkedin {
