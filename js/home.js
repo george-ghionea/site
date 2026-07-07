@@ -104,6 +104,9 @@ function goToWhere(myURL) {
               window.location.href = hrefsecva_;}
 		   else{textAlert = alert('Not Set !');}
            break;
+		 case 'goonav':
+           window.location.href = hrefgoonav_;
+           break;   
          default:
 	       textAlert = alert('Not Set !');
            break;//exit
@@ -147,12 +150,17 @@ var myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100;//
 color1="#0000cc",color2="#cc0000";//
 var 
 /**attr*/
-company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",
+company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",gooid_="875066238765.",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
 show_= "slide",hide_= "slide",box_title_= "George\'s AI Concierge",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
 /**hrefs*/
+hrefgoonav_="https://"+
+"ai-presentation-"+
+gooid_+
+"europe-west2."+
+"run.app",
 linkedin_ ="https://"+company1_+domain_+"/in/george-ghionea",
 google_= "https://"+company2_+domain_,
 whatsapp_= "https://"+company3_+domain_,
@@ -164,8 +172,8 @@ hrefmycvas_="gghionea.my.canva.site",
 hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
 hrefcocva_="https://"+hrefmycvas_+"/contact",
 hrefsecva_="https://"+hrefmycvas_+"/services",		
-href1tec_="https://"+"www.high.tech.usa",
-href2ais_="https://"+"ai-presentation-7.europe-west2.run.app";//	
+href1tec_="https://"+"gghionea.high.tech.usa",
+href2ais_="https://"+"gghionea.netlify.run.app";//
 let 
 /**options*/
 d_USA = new Date(),d_EUR = new Date(),d_ASP = new Date(),
