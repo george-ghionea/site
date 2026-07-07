@@ -234,11 +234,11 @@ window.onclick = function(event) {
       if (openDropdown.classList.contains('show')) {
         openDropdown.classList.remove('show');
       }
-	  document.getElementById("myDropdown").classList.toggle("hide");
     }
   }
 }
 function openNav() {
+  document.getElementById("myDropdown").classList.remove('show');
   document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Opened";
   document.getElementById("myNav").style.width = "100%";
 }
