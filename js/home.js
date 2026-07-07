@@ -147,7 +147,7 @@ var myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100;//
 color1="#0000cc",color2="#cc0000";//
 var 
 /**attr*/
-company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",domain_=".com",
+company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
 show_= "slide",hide_= "slide",box_title_= "George\'s AI Concierge",
@@ -157,6 +157,9 @@ linkedin_ ="https://"+company1_+domain_+"/in/george-ghionea",
 google_= "https://"+company2_+domain_,
 whatsapp_= "https://"+company3_+domain_,
 twitter_= "https://"+company4_+domain_,
+github_= "https://"+company5_+domain_,
+hrefmycvas_="gghionea.my.canva.site",
+hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
 hrefmycvas_="gghionea.my.canva.site",
 hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
 hrefcocva_="https://"+hrefmycvas_+"/contact",
@@ -224,9 +227,11 @@ function myDropdown() {
 }
 window.onclick = function(event) {
   document.getElementById("linkedin").setAttribute("href",linkedin_);
+  document.getElementById("github").setAttribute("href",github_);
   document.getElementById("google").setAttribute("href",google_);
   document.getElementById("whatsapp").setAttribute("href",whatsapp_);
   document.getElementById("twitter").setAttribute("href",twitter_);
+  document.getElementById("email").setAttribute("href",hrefEmailC_);
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     for (var i = 0; i < dropdowns.length; i++) {
