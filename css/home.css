@@ -18,7 +18,6 @@
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 0px; 
-	/*color: red;*/
 	}
    .spacer3{
 	margin-top: 0px;
@@ -160,10 +159,10 @@
 {
   display: block;
 }
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #ffffff;}/*#ddd;*/
 .show {display: block;}
 .linkedin {
-  background: #b3ccff;
+  background: #cae7d5;
   color: white;
 }
 .google {
@@ -176,6 +175,14 @@
 }
 .twitter {
   background: #fff6b3;
+  color: white;
+}
+.github {
+  background: #fff6b3;
+  color: white;
+}
+.email {
+  background: #ffccd0;
   color: white;
 }
 /* zone 3 */
@@ -201,7 +208,7 @@
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 30px;
   color: black;
   display: block;
   transition: 0.3s;
