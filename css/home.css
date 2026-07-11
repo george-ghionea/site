@@ -119,6 +119,7 @@
     div.mycontainer div {
         width:33.3%;  
         float:left;
+		height: 55px;
     }
 /* zone 2 */
 .dropbtn {
