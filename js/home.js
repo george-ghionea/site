@@ -19,6 +19,7 @@ $(document).ready(function() {
             }
         }		   
     });
+	parent.$('button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close').hide();
 	document.getElementById("alertchoice").innerHTML = "♾️"
 	+"About<br>"+"➠ "+cont_	+"<br>➠ "+serv_;
   });	
@@ -153,7 +154,7 @@ var
 company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",gooid_="875066238765.",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
-show_= "slide",hide_= "slide",box_title_= "George\'s AI Concierge",
+show_= "slide",hide_= "slide",box_title_= "George Ghionea",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
 /**hrefs*/
 hrefgoonav_="https://"+
@@ -168,8 +169,6 @@ twitter_= "https://"+company4_+domain_,
 github_= "https://"+company5_+domain_,
 hrefmycvas_="gghionea.my.canva.site",
 hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
-hrefmycvas_="gghionea.my.canva.site",
-hrefEmailC_="mailto:"+"george.ghionea@consultant.com",
 hrefcocva_="https://"+hrefmycvas_+"/contact",
 hrefsecva_="https://"+hrefmycvas_+"/services",		
 href1tec_="https://"+"gghionea.high.tech.usa",
@@ -179,7 +178,7 @@ let
 d_USA = new Date(),d_EUR = new Date(),d_ASP = new Date(),
 options1 = {timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'},
 options2 = {timeZone: 'Europe/Bucharest', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'},
-options3 = {timeZone: 'Asia/Tokyo', weekday: 'long', year: 'numeric', month: 'long',        day: 'numeric', hour: '2-digit', minute: '2-digit'};//
+options3 = {timeZone: 'Asia/Tokyo', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'};//
 document.getElementById('timeNY').innerHTML = " ▪ America / New York<br>"+d_USA.toLocaleDateString('en-US', options1);//
 document.getElementById("timeEurope").innerHTML = " ▪ Europe / Bucharest<br>"+d_EUR.toLocaleDateString('ro-EU', options2);//	
 document.getElementById('timeTokyo').innerHTML = " ▪ Asia - Pacific / Tokyo<br>"+d_ASP.toLocaleDateString('jst-JP', options3);//jst-JP/en-UK/ja-JP	
@@ -217,6 +216,7 @@ function myConcierge(){
               }
             }		   
         });
+		parent.$('button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close').hide();
     });
   });
 }
@@ -227,6 +227,14 @@ function formContact(){
     hrefformgo_="1FAIpQLSeXj8aZC6nrFMCpgMlp9069989BVZK2UMxD_jwc7psGPbI4qQ",
     hrefform_="https://"+hrefgoogle_+"/forms/d/e/"+hrefformgo_+"/viewform";	
 	window.location.href = hrefform_;
+	return;
+}
+function fStudio(){
+	var 
+	/**ai studio*/
+	hrefstudio_="https://",
+	ai_studio_="ai-minimal.ai.studio";
+	window.location.href = hrefstudio_+ai_studio_;
 	return;
 }
 function myDropdown() {
