@@ -159,6 +159,12 @@ function openAIDialog(){
   });	  
 }
 (function () {
+/** openwindow-container */
+const a = document.createElement('a');
+a.id = 'openwindow';
+a.href = 'concierge.html';
+a.textContent = 'Open window';
+document.getElementById('openwindow-container').appendChild(a);//ow-c	
 var 
 /**year*/
 year = document.getElementById('year');
