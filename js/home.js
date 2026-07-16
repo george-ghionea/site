@@ -31,6 +31,13 @@ function defaultSt(varSt) {
 		document.getElementById("alertchoice").innerHTML = "";
 		document.body.style.color = "#000000";
 		document.body.style.zoom = "100%";
+		document.getElementById("txt_nav").style.backgroundColor = col_blue;
+		document.getElementById("txt_def").style.backgroundColor = col_blue;
+		document.getElementById("txt_col_1").style.backgroundColor = col_blue;
+		document.getElementById("txt_col_2").style.backgroundColor = col_blue;
+		document.getElementById("txt_zoo_1").style.backgroundColor = col_blue;
+		document.getElementById("txt_zoo_2").style.backgroundColor = col_blue;
+		document.getElementById("txt_soc").style.backgroundColor = col_blue;
 		myZoom=100;
    } else {
      textAlert = alert('Not Set !');
@@ -38,8 +45,12 @@ function defaultSt(varSt) {
 }
 function zoomInOut(myzoompick) { 
    if (myzoompick === 'zoominn') {
+	   document.getElementById("txt_zoo_2").style.backgroundColor = col_blue;
+	   document.getElementById("txt_zoo_1").style.backgroundColor = col_white;
        if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; }
    } else if (myzoompick === 'zoomout') {
+	   document.getElementById("txt_zoo_1").style.backgroundColor = col_blue;
+	   document.getElementById("txt_zoo_2").style.backgroundColor = col_white;
 	   if (myZoom !== minZoom){ myZoom = myZoom - stepZoom; }
    } else { textAlert = alert('Not Set !'); }
    document.body.style.zoom = myZoom+"%";
@@ -53,8 +64,16 @@ function zoomInOut(myzoompick) {
 }
 function pickColor(mycolorpick) {
    switch(mycolorpick){
-     case'color1':myColor=color1;break;
-     case'color2':myColor=color2;break;
+     case'color1':
+	      myColor=color1;
+		  document.getElementById("txt_col_2").style.backgroundColor = col_blue;
+		  document.getElementById("txt_col_1").style.backgroundColor = col_white;
+		  break;
+     case'color2':
+	      myColor=color2;
+		  document.getElementById("txt_col_1").style.backgroundColor = col_blue;
+		  document.getElementById("txt_col_2").style.backgroundColor = col_white;
+		  break;
      default:textAlert=alert('Not Set !');break;//exit
    }			   		
    document.body.style.color= myColor;
@@ -156,6 +175,7 @@ cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
 show_= "slide",hide_= "slide",box_title_= "George Ghionea",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
+col_white="#ffffff",col_blue="#b3ccff",
 /**hrefs*/
 hrefgoonav_="https://"+
 "ai-presentation-"+
@@ -238,6 +258,7 @@ function fStudio(){
 	return;
 }
 function myDropdown() {
+  document.getElementById("txt_soc").style.backgroundColor = "#ffffff";//tbd
   document.getElementById("alertchoice").innerHTML = "♾️"+"Social Media"+"<br>"+"➠ Need help ?"+"<br>"+"➠ Get in touch by <a href="+hrefEmailC_+">e-mail</a> or SM channels";
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -259,6 +280,7 @@ window.onclick = function(event) {
   }
 }
 function openNav() {
+  document.getElementById("txt_nav").style.backgroundColor = "#ffffff";//tbd
   document.getElementById("myDropdown").classList.remove('show');
   document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Opened";
   document.getElementById("myNav").style.width = "100%";
