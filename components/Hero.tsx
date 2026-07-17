@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           Building Digital Experiences with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-emerald-600">Precision & Purpose</span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Specializing in Management, Software Architecture, Cybersecurity, and seamless AI integration to transform complex problems into elegant solutions
+          Specializing in Management, Software Architecture, Cybersecurity, and seamless AI integration to transform complex problems into elegant solutions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#contact" className="px-8 py-4 bg-blue-500 text-white font-semibold rounded-xl hover:bg-red-500 transition-all shadow-lg hover:shadow-xl active:scale-95">
