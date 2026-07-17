@@ -3,10 +3,10 @@ import React from 'react';
 
 const About: React.FC = () => {
   const skills = [
-    { title: 'Architecture', desc: 'Crafting scalable, responsive Java/J2EE, MVC/N-Tiers Apps with elegant design and robust state management.' },
-    { title: 'Middleware & Backend', desc: 'Developing secure Microservices with J2EE/WebSphere - JSP/Servlets/EJB - Oracle/DB2/SQL on Unix/Linux.' },
-    { title: 'AI Integration', desc: 'Deploying AI, LLMs like Gemini and GPT into production-ready features that enhance user value.' },
-    { title: 'Cloud Infrastructure', desc: 'AWS/GCP orchestration, CI/CD pipelines, and serverless architectures.' }
+    { title: 'Architecture', desc: 'Crafting scalable, responsive Java/J2EE, MVC/N-Tiers Apps with elegant design and robust state management' },
+    { title: 'Middleware & Backend', desc: 'Developing secure Microservices with J2EE/WebSphere - JSP/Servlets/EJB - Oracle/DB2/SQL on Unix/Linux' },
+    { title: 'AI Integration', desc: 'Deploying AI, LLMs like Gemini and GPT into production-ready features that enhance user value' },
+    { title: 'Cloud Infrastructure', desc: 'AWS/GCP orchestration, CI/CD pipelines, and serverless architectures' }
   ];
 
   return (
@@ -27,7 +27,7 @@ const About: React.FC = () => {
                   <br/><br/>               
                   <h4 className="font-semibold text-slate-900">George Ghionea</h4>
                   <p className="text-sm text-slate-500">Enterprise Software Achitectures</p> 
-                  <p className="text-sm text-slate-500">USA</p>
+                  <p className="text-sm text-slate-500">USA / Romania</p>
                </div>
             </div>
           </div>
