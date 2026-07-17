@@ -1,4 +1,4 @@
-/** 06/07/2026 - start */
+/* Friday, July 17, 2026 at 03:18 PM - start */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
     $("#dialogBoxMe").dialog({
@@ -140,11 +140,6 @@ function openAIDialog(){
   });	  
 }
 (function () {
-/**openwindow_container*/
-const a = document.createElement('a');
-a.id = 'openwindow';
-a.href = 'concierge.html';
-document.getElementById('openwindow-container').appendChild(a);//ow_c	
 var 
 /**year*/
 year = document.getElementById('year');
@@ -159,10 +154,11 @@ var
 company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",gooid_="875066238765.",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
-show_= "slide",hide_= "slide",box_title_= "George Ghionea",
+show_= "slide",hide_= "slide",box_title_= "George Ghionea",openwindow_="openwindow",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
 col_white="#ffffff",col_blue="#b3ccff",
 /**hrefs*/
+href_concierge_ = "concierge.html",
 hrefgoonav_="https://"+
 "ai-presentation-"+
 gooid_+
@@ -189,6 +185,11 @@ document.getElementById('timeNY').innerHTML = " ▪ America / New York<br>"+d_US
 document.getElementById("timeEurope").innerHTML = " ▪ Europe / Bucharest<br>"+d_EUR.toLocaleDateString('ro-EU', options2);//	
 document.getElementById('timeTokyo').innerHTML = " ▪ Asia - Pacific / Tokyo<br>"+d_ASP.toLocaleDateString('jst-JP', options3);//jst-JP/en-UK/ja-JP	
 /** length test: "Wednesday, September 20, 2026 at 05:49 AM" */
+/**openwindow_container*/
+const a = document.createElement('a');
+a.id = openwindow_;
+a.href = href_concierge_;
+document.getElementById('openwindow-container').appendChild(a);//ow_c
 function myConcierge(){
   $(document).ready(function() {
   $('#openwindow').each(function() {
@@ -273,4 +274,4 @@ function closeNav() {
   document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Closed";
   document.getElementById("myNav").style.width = "0%";
 }
-/** 06/07/2026 - end */
+/** Friday, July 17, 2026 at 03:18 PM - end */
