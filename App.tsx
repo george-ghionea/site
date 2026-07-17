@@ -16,6 +16,7 @@ const App: React.FC = () => {
             <span className="font-bold text-slate-900 tracking-tight">GEORGE GHIONEA</span>
           </div>
           <nav className="hidden md:flex items-center space-x-8 text-sm font-bold text-slate-900">
+            <a href="#" className="hover:text-indigo-600 transition-colors">Top</a>
             <a href="#about" className="hover:text-indigo-600 transition-colors">Expertise</a>
             <a href="#contact" className="hover:text-indigo-600 transition-colors">Contact</a>
             <a href="https://sites.google.com/view/george-ghionea" className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-red-500 transition-all">Get To Know Me</a>
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             © {new Date().getFullYear()} George Ghionea. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm">
+            <a href="#" className="hover:text-indigo-600 transition-colors">Top</a>
             <a href="#" className="hover:text-indigo-600 transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-indigo-600 transition-colors">GitHub</a>
             <a href="#" className="hover:text-indigo-600 transition-colors">Twitter</a>
