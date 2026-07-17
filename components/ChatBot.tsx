@@ -42,7 +42,7 @@ const ChatBot: React.FC = () => {
         });
       });
     } catch (error) {
-      setMessages(prev => [...prev, { role: 'model', text: 'Sorry, I encountered an error. Please try again or email Alex directly.' }]);
+      setMessages(prev => [...prev, { role: 'model', text: 'Sorry, I encountered an error. Please try again or email George directly.' }]);
     } finally {
       setIsTyping(false);
     }
