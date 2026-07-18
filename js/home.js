@@ -5,8 +5,8 @@ $(document).ready(function() {
 		position:{my: mypo_,at: atpo_},
         modal: true,
 		resizable: false,  
-	    'width'  : 450,
-        'height' : 387,	 
+	    'width'  : 455,
+        'height' : 400,	 
 		'show'   : show_,
 		'hide'   : hide_,
 		buttons: {
