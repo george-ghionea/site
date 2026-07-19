@@ -95,14 +95,12 @@ function goToWhere(myURL) {
    switch(myURL) {
          case 'con':
 	       if (cva) {
-			   document.getElementById("abo_con_cva").innerHTML = alert_msg_;
 	           document.getElementById("alertchoice").innerHTML = "♾️"+cont_;
 	           window.location.href = hrefcocva_;}
 	       else{textAlert = alert('Not Set !');}
            break;
          case 'ser':
-	       if (cva) {
-			  document.getElementById("abo_ser_cva").innerHTML = alert_msg_;
+	       if (cva) { 
 	          document.getElementById("alertchoice").innerHTML = "♾️"+serv_;
               window.location.href = hrefsecva_;}
 		   else{textAlert = alert('Not Set !');}
