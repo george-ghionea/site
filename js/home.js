@@ -1,4 +1,4 @@
-/* Friday, July 17, 2026 at 03:18 PM - start */
+/* Sunday, July 19, 2026 at 04:15 PM - start */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
     $("#dialogBoxMe").dialog({
@@ -95,12 +95,14 @@ function goToWhere(myURL) {
    switch(myURL) {
          case 'con':
 	       if (cva) {
+			   document.getElementById("abo_con_cva").innerHTML = alert_msg_;
 	           document.getElementById("alertchoice").innerHTML = "♾️"+cont_;
 	           window.location.href = hrefcocva_;}
 	       else{textAlert = alert('Not Set !');}
            break;
          case 'ser':
 	       if (cva) {
+			  document.getElementById("abo_ser_cva").innerHTML = alert_msg_;
 	          document.getElementById("alertchoice").innerHTML = "♾️"+serv_;
               window.location.href = hrefsecva_;}
 		   else{textAlert = alert('Not Set !');}
@@ -158,6 +160,7 @@ show_= "slide",hide_= "slide",box_title_= "George Ghionea",openwindow_="openwind
 btnClose = "Close", btnAiMsg = "btnAiMsg",
 col_white="#ffffff",col_blue="#b3ccff",
 /**hrefs*/
+alert_msg_="Loading...",
 href_concierge_ = "concierge.html",
 hrefgoonav_="https://"+
 "ai-presentation-"+
@@ -230,17 +233,21 @@ function myConcierge(){
 function formContact(){
 	var
 	/**form return*/
+	alert_msg_="Loading...",
 	hrefgoogle_="docs.google.com",
     hrefformgo_="1FAIpQLSeXj8aZC6nrFMCpgMlp9069989BVZK2UMxD_jwc7psGPbI4qQ",
     hrefform_="https://"+hrefgoogle_+"/forms/d/e/"+hrefformgo_+"/viewform";	
+	document.getElementById("con_act_cloud").innerHTML = alert_msg_;
 	window.location.href = hrefform_;
 	return;
 }
 function fStudio(){
 	var 
 	/**ai studio*/
+	alert_msg_="Loading...",
 	hrefstudio_="https://",
 	ai_studio_="ai-minimal.ai.studio";
+	document.getElementById("con_cloud").innerHTML = alert_msg_;
 	window.location.href = hrefstudio_+ai_studio_;
 	return;
 }
@@ -274,4 +281,4 @@ function closeNav() {
   document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Closed";
   document.getElementById("myNav").style.width = "0%";
 }
-/** Friday, July 17, 2026 at 03:18 PM - end */
+/** Sunday, July 19, 2026 at 04:15 PM - end */
