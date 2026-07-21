@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 	parent.$('button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close').hide();
 	document.getElementById("alertchoice").innerHTML = "♾️"
-	+"About<br>"+"➠ "+cont_	+"<br>➠ "+serv_;
+	+"About<br>"+"➠ "+cont_+"<br>➠ "+serv_;
   });	
 });
 function defaultSt(varSt) {
@@ -37,10 +37,11 @@ function defaultSt(varSt) {
    }  
 }
 function zoomInOut(myzoompick) { 
+   var zoominout_="";
    if (myzoompick === 'zoominn') {
-       if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; }
+       if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; zoominout_ = plus_; }
    } else if (myzoompick === 'zoomout') {
-	   if (myZoom !== minZoom){ myZoom = myZoom - stepZoom; }
+	   if (myZoom !== minZoom){ myZoom = myZoom - stepZoom; zoominout_ = minus_; }
    } else { textAlert = alert('Not Set !'); }
    document.body.style.zoom = myZoom+"%";
    switch (myZoom) {
@@ -49,7 +50,7 @@ function zoomInOut(myzoompick) {
      case maxZoom : textZoom = "(max)"; break;
      default : textZoom = ""; break; //exit
    }	
-   document.getElementById("yourzoom").innerHTML = "zoom"+"<br>"+myZoom+"%"+"<br>"+textZoom;
+   document.getElementById("yourzoom").innerHTML="<i class="+f_search_+zoominout_+"'"+"></i>"+"<br>"+myZoom+"%"+"<br>"+textZoom;
 }
 function pickColor(mycolorpick) {
    switch (mycolorpick) {
@@ -58,7 +59,7 @@ function pickColor(mycolorpick) {
        default : textAlert = alert('Not Set !'); break; //exit
    }			   		
    document.body.style.color= myColor;
-   document.getElementById("yourchoice").innerHTML="color"+"<br>"+myColor;
+   document.getElementById("yourchoice").innerHTML="<i class="+f_circle_+" style="+"'color:"+myColor+";'"+"></i>"+"<br>"+myColor;
 }
 function fillAlert(varAlert){
    let textAlert;
@@ -146,10 +147,9 @@ year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 })();//
 /**zoom*/
-var myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100;//
+myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100,plus_="-plus",minus_="-minus",f_search_="'fa fa-search";//
 /**color*/
-color1="#0000cc",color2="#cc0000";//
-var 
+color1="#0000cc",color2="#cc0000",f_circle_="'fa fa-circle'";// 
 /**attr*/
 company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",gooid_="875066238765.",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
