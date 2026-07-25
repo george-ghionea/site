@@ -1,4 +1,4 @@
-/* Sunday, July 19, 2026 at 04:15 PM - start */
+/* Saturday, July 25, 2026 at 03:11 PM - start */
 $(document).ready(function() {
 	$("#showDialog").click(function() {
     $("#dialogBoxMe").dialog({
@@ -37,7 +37,7 @@ function defaultSt(varSt) {
    }  
 }
 function zoomInOut(myzoompick) { 
-   var zoominout_="";
+   var alert_msg_ ="";
    if (myzoompick === 'zoominn') {
        if (myZoom !== maxZoom){ myZoom = myZoom + stepZoom; zoominout_ = plus_; }
    } else if (myzoompick === 'zoomout') {
@@ -45,12 +45,12 @@ function zoomInOut(myzoompick) {
    } else { textAlert = alert('Not Set !'); }
    document.body.style.zoom = myZoom+"%";
    switch (myZoom) {
-     case optimalZoom : textZoom = "(optimal)"; break;
-     case minZoom : textZoom = "(min)"; break;
-     case maxZoom : textZoom = "(max)"; break;
+     case optimalZoom : textZoom = "(optimal)"; alert_msg_ = f_thu_ ; break;
+     case minZoom : textZoom = "(min)"; alert_msg_ = f_att_ ; break;
+     case maxZoom : textZoom = "(max)"; alert_msg_ = f_att_ ; break;
      default : textZoom = ""; break; //exit
    }	
-   document.getElementById("yourzoom").innerHTML="<i class="+f_search_+zoominout_+"'"+"></i>"+"<br>"+myZoom+"%"+"<br>"+textZoom;
+   document.getElementById("yourzoom").innerHTML = "<i class="+alert_msg_+"></i>"+" <i class="+f_search_+zoominout_+"'"+"></i>"+"<br>"+myZoom+"%"+"<br>"+textZoom;
 }
 function pickColor(mycolorpick) {
    switch (mycolorpick) {
@@ -84,7 +84,7 @@ function infoZone(myZone) {
        document.getElementById("alertchoice").innerHTML = "♾️AI Studio"+"<br>"+"➠ Feel free to reach out for assistance"+"<br>"+"➠ <a href="+hrefEmailC_+">e-mail</a> me (en-usa,fr,ro)";
        break;
        case 'ai_':
-       document.getElementById("alertchoice").innerHTML = "♾️"+"<buttonAI style="+"'background-color: #0066cc'"+" onclick = myConcierge()>Concierge</button>"+"<br>";
+       document.getElementById("alertchoice").innerHTML = "<buttonAI style="+"'background-color: #0066cc'"+" onclick = myConcierge()>"+"<i class="+f_cloud_+"></i>"+" Concierge"+"</button>"+"<br>";
        break;	     
      default:
 	   textAlert = alert('Not Set !');
@@ -147,16 +147,16 @@ year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 })();//
 /**zoom*/
-myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100,plus_="-plus",minus_="-minus",f_search_="'fa fa-search";//
+myZoom=100,textZoom="",stepZoom=10,minZoom=80,maxZoom=130,optimalZoom=100,plus_="-plus",minus_="-minus",f_search_="'fa fa-search",f_att_="'fa fa-lock'",f_thu_="'fa fa-thumbs-o-up'",f_cloud_="'fa fa-jsfiddle'",//
 /**color*/
-color1="#0000cc",color2="#cc0000",f_circle_="'fa fa-circle'";// 
+color1="#0000cc",color2="#cc0000",f_circle_="'fa fa-circle'",// 
 /**attr*/
 company1_="linkedin",company2_="google",company3_="whatsapp",company4_="x",company5_="github",domain_=".com",gooid_="875066238765.",
 cont_= "Contact",serv_= "Services Offering",conc_= "Concierge",
 mypo_= "left+275 top+5",atpo_= "left+275 top+5",
 show_= "slide",hide_= "slide",box_title_= "George Ghionea",openwindow_="openwindow",
 btnClose = "Close", btnAiMsg = "btnAiMsg",
-col_white="#ffffff",col_blue="#b3ccff",
+col_white="#ffffff",col_blue="#b3ccff",//
 /**hrefs*/
 alert_msg_="Loading...",
 href_concierge_ = "concierge.html",
@@ -279,4 +279,4 @@ function closeNav() {
   document.getElementById("alertchoice").innerHTML = "♾️"+"Navigation Closed";
   document.getElementById("myNav").style.width = "0%";
 }
-/** Sunday, July 19, 2026 at 04:15 PM - end */
+/** Saturday, July 25, 2026 at 03:11 PM - end */
